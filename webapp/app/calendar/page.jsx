@@ -4,8 +4,6 @@ import { Footer4 } from "@/components/Footer4";
 import { CalendarGrid } from "./components/CalendarGrid";
 import { TodayInfo } from "./components/TodayInfo";
 
-export const dynamic = "force-dynamic";
-
 export default function Page() {
   return (
     <div>

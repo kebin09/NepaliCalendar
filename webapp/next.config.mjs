@@ -1,13 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  experimental: {
-    outputFileTracingIncludes: {
-      "/posts": ["./data/posts.json"],
-      "/podcasts": ["./data/podcasts.json"],
-    },
   },
 };
 
