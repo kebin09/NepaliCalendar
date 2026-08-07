@@ -1,0 +1,40 @@
+"use client";
+
+import { Button } from "@relume_io/relume-ui";
+import React from "react";
+
+export function Header26() {
+  return (
+    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+      <div className="container">
+        <div className="flex flex-col items-center">
+          <div className="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
+            <div className="w-full max-w-lg">
+              <h1 className="mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl">
+                विश्व स्तनपान सप्ताह प्रारम्भ
+              </h1>
+              <p className="md:text-md">
+                आज साउन १६ गते, विश्व स्तनपान सप्ताहको पहिलो दिन। आमा र शिशुको
+                अटुट सम्बन्धको यो उत्सव मनाऔं।
+              </p>
+              <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
+                <Button title="विवरण">विवरण</Button>
+                <Button title="साझा" variant="secondary">
+                  साझा
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="/images/sunrise.jpg"
+              className="size-full object-cover"
+              alt="नेपाली पात्रोको चित्र"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+

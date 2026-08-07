@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36" height="36" role="img" aria-label="नेपाली पात्रो लोगो">
+  <rect x="2" y="6" width="44" height="40" rx="10" fill="#C8102E"/>
+  <path d="M2 16h44v6H2z" fill="#A50D24"/>
+  <rect x="10" y="2" width="5" height="10" rx="2.5" fill="#C8102E"/>
+  <rect x="33" y="2" width="5" height="10" rx="2.5" fill="#C8102E"/>
+  <rect x="8" y="26" width="7" height="7" rx="1.5" fill="#ffffff"/>
+  <rect x="20" y="26" width="7" height="7" rx="1.5" fill="#ffffff"/>
+  <rect x="32" y="26" width="7" height="7" rx="1.5" fill="#ffffff"/>
+  <rect x="8" y="36" width="7" height="7" rx="1.5" fill="#FFC72C"/>
+  <rect x="20" y="36" width="7" height="7" rx="1.5" fill="#ffffff"/>
+  <rect x="32" y="36" width="7" height="7" rx="1.5" fill="#ffffff"/>
+</svg>

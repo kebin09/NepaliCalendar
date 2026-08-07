@@ -1,0 +1,26 @@
+"use client";
+
+import { Button } from "@relume_io/relume-ui";
+import React from "react";
+
+export function Cta25() {
+  return (
+    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+      <div className="container max-w-lg text-center">
+        <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          आजको राशिफल हेर्नुहोस्
+        </h2>
+        <p className="md:text-md">
+          आफ्नो राशि चयन गर्नुहोस् र आजको दिन तपाईंको लागि के लिएर आएको छ,
+          विस्तृतमा पढ्नुहोस्।
+        </p>
+        <div className="mt-6 flex items-center justify-center gap-4 md:mt-8">
+          <Button title="राशिफल">राशिफल</Button>
+          <Button title="राशि" variant="secondary">
+            राशि
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
