@@ -4,6 +4,32 @@ import { Footer4 } from "@/components/Footer4";
 import { CalendarGrid } from "./components/CalendarGrid";
 import { TodayInfo } from "./components/TodayInfo";
 
+export const metadata = {
+  title: "आजको नेपाली मिति, तिथि र पर्व | Nepali Calendar Today",
+  description:
+    "आजको विक्रम संवत् मिति, तिथि, नक्षत्र र आगामी चाडपर्व हेर्नुहोस्। Check today's Bikram Sambat date with tithi, nakshatra and festival details.",
+  keywords: [
+    "nepali date today",
+    "आजको मिति",
+    "nepali calendar today",
+    "bikram sambat date",
+    "nepali tithi",
+    "nepali panchang",
+    "today nepali date",
+    "nepali festival calendar",
+    "नेपाली पात्रो आजको",
+    "nepali nakshatra",
+  ],
+  openGraph: {
+    title: "आजको नेपाली मिति, तिथि र पर्व | Nepali Calendar",
+    description:
+      "आजको विक्रम संवत् मिति, तिथि, नक्षत्र र आगामी चाडपर्व हेर्नुहोस्।",
+  },
+  alternates: {
+    canonical: "https://nepalicalendar.kebinmaharjan.com.np/calendar/",
+  },
+};
+
 export default function Page() {
   return (
     <div>

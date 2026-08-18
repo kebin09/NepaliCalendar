@@ -7,6 +7,23 @@ import { Pricing26 } from "./components/Pricing26";
 import { Contact6 } from "./components/Contact6";
 import { Footer4 } from "@/components/Footer4";
 
+export const metadata = {
+  title: "नेपाल पैसा पठाउनुहोस् | Send Money to Nepal",
+  description:
+    "अमेरिका र अष्ट्रेलियाबाट नेपाल पैसा पठाउनुहोस् — प्रतिस्पर्धात्मक विनिमय दर र कम शुल्क। Send money to Nepal from USA and Australia with competitive rates.",
+  keywords: [
+    "send money to nepal",
+    "नेपाल पैसा पठाउने",
+    "remittance nepal",
+    "money transfer nepal",
+    "nepal remittance from usa",
+    "australia to nepal money transfer",
+  ],
+  alternates: {
+    canonical: "https://nepalicalendar.kebinmaharjan.com.np/remit/",
+  },
+};
+
 export default function Page() {
   return (
     <div>

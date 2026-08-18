@@ -7,6 +7,23 @@ import { Testimonial3 } from "./components/Testimonial3";
 import { Cta25 } from "./components/Cta25";
 import { Footer4 } from "@/components/Footer4";
 
+export const metadata = {
+  title: "उपहार पठाउनुहोस् नेपाल | Send Gifts to Nepal",
+  description:
+    "काठमाडौं उपत्यकाभित्र २४ घण्टामा केक, फूल र ह्याम्पर पठाउनुहोस्। Send cakes, flowers and hampers within 24 hours in Kathmandu Valley.",
+  keywords: [
+    "send gifts to nepal",
+    "नेपाल उपहार पठाउने",
+    "gift delivery kathmandu",
+    "cake delivery nepal",
+    "flowers delivery nepal",
+    "nepal gift shop online",
+  ],
+  alternates: {
+    canonical: "https://nepalicalendar.kebinmaharjan.com.np/gifts/",
+  },
+};
+
 export default function Page() {
   return (
     <div>

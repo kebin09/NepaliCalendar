@@ -2,6 +2,33 @@
 import { Navbar9 } from "@/components/Navbar9";
 import { Footer4 } from "@/components/Footer4";
 
+export const metadata = {
+  title: "Nepali Calendar - English | Bikram Sambat Date & Festivals",
+  description:
+    "Check today's Bikram Sambat (Nepali) date, tithi, festivals, horoscope and date converter. Your complete English guide to the Nepali calendar system.",
+  keywords: [
+    "nepali calendar english",
+    "bikram sambat calendar",
+    "nepali date converter english",
+    "nepali tithi english",
+    "nepali festival list english",
+    "v Vikram Sambat to gregorian",
+  ],
+  openGraph: {
+    title: "Nepali Calendar - English | Bikram Sambat Date & Festivals",
+    description:
+      "Today's Bikram Sambat date, tithi, festivals, horoscope and date converter in English.",
+    locale: "en_US",
+  },
+  alternates: {
+    canonical: "https://nepalicalendar.kebinmaharjan.com.np/en/",
+    languages: {
+      "ne": "/",
+      "en": "/en/",
+    },
+  },
+};
+
 const features = [
   {
     title: "Nepali Calendar",

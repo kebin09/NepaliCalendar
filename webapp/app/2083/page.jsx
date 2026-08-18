@@ -2,6 +2,23 @@
 import { Navbar9 } from "@/components/Navbar9";
 import { Footer4 } from "@/components/Footer4";
 
+export const metadata = {
+  title: "विक्रम संवत् २०८३ | Nepali Calendar 2083 Festivals",
+  description:
+    "विक्रम संवत् २०८३ का प्रमुख चाडपर्व — दसैं, तिहार, छठ, माघे संक्रान्ति, शिवरात्रि र होली। Major festivals and holidays of Bikram Sambat 2083.",
+  keywords: [
+    "nepali calendar 2083",
+    "विक्रम संवत् २०८३",
+    "nepali festivals 2083",
+    "2083 chadparva",
+    "dashain tihar 2083",
+    "nepal holiday calendar 2083",
+  ],
+  alternates: {
+    canonical: "https://nepalicalendar.kebinmaharjan.com.np/2083/",
+  },
+};
+
 const festivals = [
   {
     name: "दसैं",

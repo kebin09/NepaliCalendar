@@ -2,6 +2,16 @@
 import { Navbar9 } from "@/components/Navbar9";
 import { Footer4 } from "@/components/Footer4";
 
+export const metadata = {
+  title: "यो पृष्ठ चाँडै उपलब्ध हुनेछ | Coming Soon",
+  description:
+    "नयाँ सामग्री तयार गर्दै छौं। पात्रो, राशिफल र मिति रूपान्तरण पृष्ठहरू भ्रमण गर्नुहोस्।",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 export default function Page() {
   return (
     <div>

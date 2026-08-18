@@ -8,6 +8,22 @@ import { Layout502 } from "./components/Layout502";
 import { Cta25 } from "./components/Cta25";
 import { Footer4 } from "@/components/Footer4";
 
+export const metadata = {
+  title: "Nepali Calendar | नेपाली पात्रो - पात्रो, राशिफल, मौसम",
+  description:
+    "नेपालको पहिलो AI-संचालित पात्रो। चाडपर्व, पञ्चाङ्ग, मौसम, वित्त, र ज्योतिष एकै ठाउँमा। Nepal's first AI-powered calendar with festivals, panchang, weather, finance and astrology.",
+  keywords: [
+    "nepali calendar app",
+    "नेपाली पात्रो एप",
+    "nepali patro app",
+    "AI calendar nepal",
+    "nepal calendar features",
+  ],
+  alternates: {
+    canonical: "https://nepalicalendar.kebinmaharjan.com.np/home/",
+  },
+};
+
 export default function Page() {
   return (
     <div>

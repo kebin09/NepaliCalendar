@@ -8,6 +8,23 @@ import { Testimonial3 } from "./components/Testimonial3";
 import { Cta25 } from "./components/Cta25";
 import { Footer4 } from "@/components/Footer4";
 
+export const metadata = {
+  title: "स्वास्थ्य सेवा | Health Services Nepal",
+  description:
+    "NMC-प्रमाणित डाक्टरहरूसँग प्रत्यक्ष परामर्श, स्वास्थ्य ट्र्याकिङ र औषधि रिमाइन्डर। Consult certified doctors, track health metrics and set medicine reminders.",
+  keywords: [
+    "nepal health app",
+    "नेपाल स्वास्थ्य सेवा",
+    "doctor consultation nepal",
+    "online doctor nepal",
+    "health tracking app",
+    "medicine reminder nepal",
+  ],
+  alternates: {
+    canonical: "https://nepalicalendar.kebinmaharjan.com.np/health/",
+  },
+};
+
 export default function Page() {
   return (
     <div>
