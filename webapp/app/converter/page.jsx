@@ -17,6 +17,7 @@ export const metadata = {
   alternates: {
     canonical: "https://nepalicalendar.kebinmaharjan.com.np/converter/",
   },
+  robots: { index: false },
 };
 
 export default function Page() {

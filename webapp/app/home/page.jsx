@@ -22,6 +22,7 @@ export const metadata = {
   alternates: {
     canonical: "https://nepalicalendar.kebinmaharjan.com.np/home/",
   },
+  robots: { index: false },
 };
 
 export default function Page() {

@@ -81,9 +81,9 @@ export function Layout491() {
       <div className="container">
         <div className="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">योजना</p>
-          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
             आजको राशिफल पढेर दिनको योजना बनाउनुहोस्
-          </h1>
+          </h2>
           <p className="md:text-md">
             ताराहरूले आजको दिन कस्तो संकेत गरिरहेका छन्, त्यो बुझ्नुहोस्। आफ्नो
             राशिफल पढेर हरेक कदम सोचविचार गरी चाल्नुहोस्।

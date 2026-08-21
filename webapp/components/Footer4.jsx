@@ -16,6 +16,9 @@ const footerLinks = [
   { title: "ज्योतिष", href: "/rashifal" },
   { title: "समाचार", href: "/news" },
   { title: "उपकरण", href: "/converter" },
+  { title: "हाम्रो बारेमा", href: "/about/" },
+  { title: "गोपनीयता नीति", href: "/privacy/" },
+  { title: "सम्पर्क", href: "/contact/" },
 ];
 
 const socialLinks = [
