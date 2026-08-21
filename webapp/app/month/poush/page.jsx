@@ -3,20 +3,22 @@ import { Navbar9 } from "@/components/Navbar9";
 import { Footer4 } from "@/components/Footer4";
 
 export const metadata = {
-  title: "पौष महिना — Poush 2083 | Coldest Month & Tamu Losar",
+  title: "पौष महिना — Poush Month | December-January",
   description:
-    "पौष (Poush) is the ninth month of Bikram Sambat — the coldest stretch of the year featuring Tamu Losar, Christmas and the start of Swasthani Brata Katha. Learn its festivals, weather, farming and astrology.",
+    "पौष (Poush) is the ninth month of Bikram Sambat, falling in December-January. Explore Tamu Losar, Kharmas, peak winter fog, Gurung New Year celebrations and shraadh traditions in Nepal.",
   keywords: [
     "poush",
     "poush month",
+    "पौष",
     "पौष महिना",
-    "tamu losar gurung new year",
-    "swasthani brata katha",
-    "coldest month nepal",
-    "nepali calendar poush",
-    "dhanu sankranti",
-    "pushya nakshatra",
+    "tamu losar",
+    "तमु ल्होसार",
     "kharmas",
+    "खर्मस",
+    "gurung new year",
+    "nepali calendar poush",
+    "nepal winter month",
+    "poush sankranti",
   ],
   alternates: {
     canonical: "https://nepalicalendar.kebinmaharjan.com.np/month/poush/",
@@ -50,24 +52,47 @@ const breadcrumbJsonLd = {
 
 const festivals = [
   {
-    name: "तमु ल्होसार (Tamu Losar)",
-    detail:
-      "On Poush 15, the Gurung community welcomes its new year with rodhi gatherings, seelu dance, traditional dress parades and feasts of sikas and raksi.",
+    nameNe: "तमु ल्होसार",
+    nameEn: "Tamu Losar",
+    detailNe:
+      "गुरुङ समुदायको नयाँ वर्ष तमु ल्होसार पौष पूर्णिमाका दिन मनाइन्छ। लोस्यार झन्डा, गुन्हु चोलो, सेल रोटी, छिउरा र कला-संस्कृति कार्यक्रमले काठमाडौं, पोखरा र गाउँहरू रङ्गीचङ्गी हुन्छन्।",
+    detailEn:
+      "The Gurung community welcomes its New Year, Tamu Losar, on Poush Purnima. Losar flags, gunyu-cholo attire, sel roti, chura and cultural programs color Kathmandu, Pokhara and home villages with feasts and dances.",
   },
   {
-    name: "क्रिसमस (Christmas)",
-    detail:
-      "December 25 falls within Poush; churches across Kathmandu, Pokhara and the eastern hills hold candlelight services while markets sell Christmas trees and cakes.",
+    nameNe: "खर्मस",
+    nameEn: "Kharmas",
+    detailNe:
+      "सूर्य धनु राशिमा प्रवेश गरेपछि एक महिना खर्मस लाग्छ। यो अवधिमा विवाह, ब्रतबन्धजस्ता शुभ कार्य रोकिन्छन् र भक्तहरूले श्राद्ध, दान र पूजापाठमा जोड दिन्छन्।",
+    detailEn:
+      "When the Sun enters Dhanu (Sagittarius) rashi, the inauspicious month of Kharmas begins. Weddings and sacred-thread ceremonies pause while devotees focus on shraadh rites, charity and daily worship until Makar Sankranti.",
+  },
+];
+
+const quickFacts = [
+  {
+    labelNe: "महिना",
+    labelEn: "Month",
+    valueNe: "डिसेम्बर-जनवरी",
+    valueEn: "December-January",
   },
   {
-    name: "स्वस्थानी ब्रत कथा प्रारम्भ",
-    detail:
-      "From Poush Purnima, devotees begin a month of daily Swasthani recitals, fasting women lighting 108 diyos each evening for family welfare.",
+    labelNe: "मुख्य पर्व",
+    labelEn: "Key Festivals",
+    valueNe: "तमु ल्होसार, खर्मस",
+    valueEn: "Tamu Losar, Kharmas",
   },
   {
-    name: "पौष संक्रान्ति अवधि (Kharmas)",
-    detail:
-      "The solar month of Poush is treated as kharmas, when auspicious ceremonies pause and devotion, charity and scripture reading take priority.",
+    labelNe: "मौसम",
+    labelEn: "Weather",
+    valueNe: "जाडो चरम, धमिलो बिहान, कुहिरो",
+    valueEn: "Peak winter, hazy mornings, fog",
+  },
+  {
+    labelNe: "संस्कृति",
+    labelEn: "Culture",
+    valueNe: "गुरुङ नयाँ वर्ष, खर्मसमा श्राद्ध",
+    valueEn: "Gurung New Year, shraadh in Kharmas",
   },
 ];
 
@@ -83,22 +108,41 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · नौँ महिना
+              <span className="lang-ne">
+                विक्रम संवत् · नवौँ महिना · डिसेम्बर-जनवरी
+              </span>
+              <span className="lang-en">
+                Vikram Samvat · Ninth Month · December-January
+              </span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              पौष महिना — Poush 2083
+              <span className="lang-ne">पौष महिना</span>
+              <span className="lang-en">Poush Month</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              पौष, running mid-December to mid-January, is the coldest month
-              of the Nepali year — yet its long nights glow with storytelling,
-              bonfires and community new years. From Gurung rodhi songs at
-              Tamu Losar to nightly Swasthani katha circles, Poush turns
-              winter into a season of warmth. Track its tithi and sankranti
-              dates on our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              as you plan the month.
+              <span className="lang-ne">
+                पौष विक्रम संवत्को नवौँ महिना हो, जुन डिसेम्बरदेखि जनवरीसम्म
+                पर्छ। जाडो चरममा पुग्ने यो महिनामा बिहान धमिलो र कुहिरोले
+                घेरिन्छ, तर गुरुङ समुदायको रङ्गीन तमु ल्होसारले चिसोलाई
+                उत्सवमा बदलिदिन्छ। खर्मस लागेकाले शुभ कार्य रोकिन्छन् र भक्ति,
+                श्राद्ध र दानमा जोड दिइन्छ। दैनिक तिथि{" "}
+                <a href="/calendar/" className="underline">
+                  नेपाली पात्रो
+                </a>{" "}
+                मा हेर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Poush is the ninth month of Bikram Sambat, spanning December
+                to January. Winter reaches its depths with hazy, fog-bound
+                mornings — yet the colorful Tamu Losar turns the chill into
+                celebration for the Gurung community. With Kharmas underway,
+                auspicious ceremonies pause and devotion, shraadh and charity
+                take center stage. Track daily tithis on our{" "}
+                <a href="/calendar/" className="underline">
+                  Nepali calendar
+                </a>
+                .
+              </span>
             </p>
           </div>
         </section>
@@ -106,41 +150,49 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              Winter Traditions of Poush
+              <span className="lang-ne">एक नजरमा पौष</span>
+              <span className="lang-en">Poush at a Glance</span>
             </h2>
-            <p className="mb-4">
-              Traditional households treat Poush as a time to slow down.
-              Elders gather children around hearths for folk tales, farmers
-              rest after harvest, and kitchens lean on warming foods — dhido,
-              masu-bhat, and chaku-rich sweets. The concept of kharmas
-              discourages weddings and housewarmings now, so social energy
-              channels instead into charity, temple visits and recitals.
-            </p>
-            <p>
-              The most beloved ritual is the Swasthani Brata Katha cycle that
-              begins on Poush Purnima. For thirty-one consecutive evenings,
-              families read the story of goddess Swasthani and Lord
-              Shiva&apos;s trials, while unmarried women fast in hope of good
-              husbands and mothers pray for children. In Gurung villages,
-              meanwhile, Tamu Losar fills courtyards with drums as elders
-              bless the coming agricultural cycle.
-            </p>
+            <ul className="grid gap-6 md:grid-cols-2">
+              {quickFacts.map((f) => (
+                <li
+                  key={f.labelEn}
+                  className="rounded-lg border border-border-primary p-6"
+                >
+                  <h3 className="mb-2 text-xl font-semibold">
+                    <span className="lang-ne">{f.labelNe}</span>
+                    <span className="lang-en">{f.labelEn}</span>
+                  </h3>
+                  <p>
+                    <span className="lang-ne">{f.valueNe}</span>
+                    <span className="lang-en">{f.valueEn}</span>
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-              Major Festivals in Poush
+              <span className="lang-ne">पौषका मुख्य चाडपर्वहरू</span>
+              <span className="lang-en">Major Festivals in Poush</span>
             </h2>
             <ul className="grid gap-6 md:grid-cols-2">
               {festivals.map((f) => (
                 <li
-                  key={f.name}
+                  key={f.nameEn}
                   className="rounded-lg border border-border-primary p-6"
                 >
-                  <h3 className="mb-2 text-xl font-semibold">{f.name}</h3>
-                  <p>{f.detail}</p>
+                  <h3 className="mb-2 text-xl font-semibold">
+                    <span className="lang-ne">{f.nameNe}</span>
+                    <span className="lang-en">{f.nameEn}</span>
+                  </h3>
+                  <p>
+                    <span className="lang-ne">{f.detailNe}</span>
+                    <span className="lang-en">{f.detailEn}</span>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -151,47 +203,80 @@ export default function Page() {
           <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:gap-x-20">
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Weather &amp; Season
+                <span className="lang-ne">मौसम र ऋतु</span>
+                <span className="lang-en">Weather &amp; Season</span>
               </h2>
               <p className="mb-4">
-                Expect the year&apos;s harshest cold. Kathmandu mornings hover
-                near freezing, hill districts like Jumla and Mustang drop well
-                below zero, and dense Terai fog disrupts highways and flights
-                for days. Daylight is shortest around the solstice, yet sunny
-                middays remain pleasant enough for rooftop sunbathing — a
-                cherished Nepali winter pastime.
+                <span className="lang-ne">
+                  पौषमा जाडो चरममा पुग्छ। बिहान धमिलो हुन्छ, कुहिरोले तराई र
+                  उपत्यका ढाक्छ, र घाम ढिलो उज्यालो हुन्छ। उपत्यकामा राति
+                  तापक्रम शून्य मुनि झर्न सक्छ भने तराईमा कुहिरोले हवाई
+                  उडानहरू अलमलिन्छन्। घाम लागेपछि भने दिन सफा र मनमोहक
+                  हुन्छन् — जाडो यात्राका लागि तयारी गर्नैपर्छ।
+                </span>
+                <span className="lang-en">
+                  Peak winter grips Poush. Mornings turn hazy, fog blankets
+                  the Tarai and valley, and sunshine arrives late. Valley
+                  nights can dip below zero while Terai fog delays flights.
+                  Once the sun climbs, days turn clear and crisp — pack warm
+                  layers for winter travel.
+                </span>
               </p>
               <h2 className="mb-4 mt-8 text-3xl font-bold md:text-4xl">
-                Agriculture
+                <span className="lang-ne">कृषि र जीवनशैली</span>
+                <span className="lang-en">Agriculture &amp; Life</span>
               </h2>
               <p>
-                Fields mostly rest under winter wheat and barley that grow
-                slowly in the chill. Farmers mulch vegetable beds against
-                frost, tend polyhouse tomatoes, and drive herds down from
-                high pastures. In river valleys, sugarcane pressing begins,
-                filling bazaars with fresh gud and chaku for the Sankranti
-                sweets just ahead.
+                <span className="lang-ne">
+                  खेतबारीमा काम थन्किन्छ; परिवारहरू आँगनमा घाम ताप्छन्, अचार
+                  र मर्मिट बनाउँछन्। भक्तहरू बिहानै नुहाएर देवतालाई तिल, चामल
+                  र दान गर्छन्।
+                </span>
+                <span className="lang-en">
+                  Fieldwork slows as families sunbathe in courtyards, pickle
+                  winter greens and mend quilts. Devotees bathe at dawn and
+                  offer sesame, rice and alms to the deities throughout the
+                  month.
+                </span>
               </p>
             </div>
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Astrological Significance
+                <span className="lang-ne">सांस्कृतिक महत्त्व</span>
+                <span className="lang-en">Cultural Significance</span>
               </h2>
               <p className="mb-4">
-                Dhanu Sankranti keeps the Sun in Dhanu (Sagittarius) rashi for
-                nearly all of Poush. The month is named for the Pushya
-                nakshatra, considered the most nourishing star in Vedic
-                astrology even though kharmas restricts material ventures.
-                Jyotish tradition holds that spiritual practices performed in
-                Poush yield multiplied merit, which is why vrats, japa and
-                dana dominate rather than celebrations.
+                <span className="lang-ne">
+                  पौष गुरुङ संस्कृति र धार्मिक आस्थाको महिना हो। तमु ल्होसारमा
+                  गुरुङ समुदायले लोस्यार फर्काएर नयाँ वर्षको स्वागत गर्छ —
+                  ठूला भेला, नाचगान र परम्परागत खानाले दिनभर उत्सव चल्छ।
+                  खर्मसका दिनहरूमा भने श्राद्ध, तर्पण र दानलाई शुभ मानिन्छ;
+                  विवाहजस्ता काम भने मकर संक्रान्तिपछि मात्र सुरु हुन्छन्।
+                </span>
+                <span className="lang-en">
+                  Poush belongs to Gurung heritage and religious devotion.
+                  During Tamu Losar, the community raises losar flags to greet
+                  the New Year with mass gatherings, dances and traditional
+                  food. Through Kharmas, shraadh, tarpan and charity are
+                  considered meritorious, while weddings wait until Maghe
+                  Sankranti opens the season again.
+                </span>
               </p>
               <p>
-                Read daily planetary notes on our{" "}
-                <a href="/jyotish/" className="underline">
-                  jyotish page
-                </a>
-                .
+                <span className="lang-ne">
+                  BS र AD मिति तुरुन्तै तुलना गर्न हाम्रो{" "}
+                  <a href="/date-converter/" className="underline">
+                    मिति रूपान्तरण
+                  </a>{" "}
+                  प्रयोग गर्नुहोस्।
+                </span>
+                <span className="lang-en">
+                  Compare BS and AD dates instantly on our{" "}
+                  <a href="/date-converter/" className="underline">
+                    date converter
+                  </a>
+                  .
+                </span>
               </p>
             </div>
           </div>
@@ -200,23 +285,29 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">सम्बन्धित पृष्ठहरू</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/month/mangsir/" className="underline">
-                Previous month: Mangsir
+                <span className="lang-ne">अघिल्लो महिना: मंसिर</span>
+                <span className="lang-en">Previous month: Mangsir</span>
               </a>
               <a href="/month/magh/" className="underline">
-                Next month: Magh
+                <span className="lang-ne">अर्को महिना: माघ</span>
+                <span className="lang-en">Next month: Magh</span>
               </a>
               <a href="/festival/tamu-losar/" className="underline">
-                Tamu Losar
-              </a>
-              <a href="/festival/swasthani-brata/" className="underline">
-                Swasthani Brata Katha
+                <span className="lang-ne">तमु ल्होसार</span>
+                <span className="lang-en">Tamu Losar</span>
               </a>
               <a href="/calendar/" className="underline">
-                Today&apos;s Date
+                <span className="lang-ne">पात्रो हेर्नुहोस्</span>
+                <span className="lang-en">View Calendar</span>
+              </a>
+              <a href="/converter/" className="underline">
+                <span className="lang-ne">BS देखि AD रूपान्तरण</span>
+                <span className="lang-en">BS to AD Converter</span>
               </a>
             </div>
           </div>

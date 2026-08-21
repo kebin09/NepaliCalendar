@@ -77,24 +77,6 @@ const eventJsonLd = {
   },
 };
 
-const mantras = [
-  {
-    name: "ॐ नमः शिवाय (Om Namah Shivaya)",
-    detail:
-      "The Panchakshara — five-syllable king of mantras. Devotees chant it continuously through the night, believing each syllable purifies one element of the body.",
-  },
-  {
-    name: "महामृत्युञ्जय मन्त्र (Mahamrityunjaya Mantra)",
-    detail:
-      "\"Om Tryambakam Yajamahe...\" — the victory-over-death mantra recited 108 times for health and longevity of self and family.",
-  },
-  {
-    name: "बिल्वाष्टकम् (Bilvashtakam)",
-    detail:
-      "Eight verses praising the three-leafed bilva offered on the lingam; even a single leaf with devotion is said to equal grand offerings.",
-  },
-];
-
 export default function Page() {
   return (
     <div>
@@ -111,25 +93,43 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · फागुन कृष्ण चतुर्दशी · रात्रि भरको पूजा
+              <span className="lang-ne">
+                विक्रम संवत् २०८३ · फागुन कृष्ण चतुर्दशी · रात्रि भरको पूजा
+              </span>
+              <span className="lang-en">
+                Vikram Samvat 2083 · Falgun Krishna Chaturdashi · The Great
+                Night of Shiva
+              </span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              महाशिवरात्रि २०८३
+              <span className="lang-ne">महाशिवरात्रि २०८३</span>
+              <span className="lang-en">Maha Shivaratri 2083</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              महाशिवरात्रि — the Great Night of Shiva — falls once a year on
-              Falgun Krishna Chaturdashi (February–March), when darkness is
-              deepest just before the new moon. On this single night, Kathmandu
-              becomes the spiritual capital of the Hindu world: over a million
-              pilgrims stream toward Pashupatinath, hundreds of ash-smeared
-              naga sadhus descend from the Himalaya, and temple bells keep time
-              until sunrise. It is a national holiday in Nepal, one of the few
-              countries where Shiva&apos;s night pauses the entire state. Track
-              this year&apos;s exact tithi on our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>
-              .
+              <span className="lang-ne">
+                महादेवको रात्रि — फागुन कृष्ण चतुर्दशीका रात पशुपतिनाथमा लाखौं
+                भक्त भेला हुन्छन्। हिमालबाट ओर्लिएका साधुसन्यासीहरूको भेला,
+                व्रत, जलाभिषेक र शिवलिंग पूजाले रातभरि जागरण चल्छ। नेपालमा यो
+                दिन सार्वजनिक बिदा हो — शिवको महान् रातमा सिङ्गो देश भक्तिमा
+                लीन हुन्छ। यस वर्षको तिथि{" "}
+                <a href="/calendar/" className="underline">
+                  नेपाली पात्रो
+                </a>{" "}
+                मा हेर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Night of Lord Shiva — millions of devotees gather at
+                Pashupatinath on Falgun Krishna Chaturdashi (February–March).
+                Ash-smeared sadhus descend from the Himalaya, while fasting,
+                water offerings and Shiva lingam worship fuel an all-night
+                vigil. It is a public holiday in Nepal — one of the few nights
+                when the entire nation pauses in devotion. Track this
+                year&apos;s tithi on our{" "}
+                <a href="/calendar/" className="underline">
+                  Nepali calendar
+                </a>
+                .
+              </span>
             </p>
           </div>
         </section>
@@ -137,26 +137,46 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              Mythology: Why This Night Is Supreme
+              <span className="lang-ne">इतिहास र महत्त्व: यो रात किन उत्कृष्ट?</span>
+              <span className="lang-en">
+                History &amp; Significance: Why This Night Is Supreme
+              </span>
             </h2>
             <p className="mb-4">
-              Several legends converge on this tithi. The Puranas describe it as
-              the night Shiva performed the <strong>tandava</strong> — the
-              cosmic dance of creation and destruction. Another beloved story
-              tells of a hunter who, stranded overnight in a bel tree above a
-              Shiva lingam, unknowingly dropped bilva leaves and kept a hungry
-              vigil; by dawn, months of accidental worship had washed away his
-              sins. The most popular tradition says this was the night Shiva
-              appeared as an endless pillar of light (Jyotirlinga), challenging
-              Brahma and Vishnu to find its ends — a reminder that the divine
-              has no beginning or boundary.
+              <span className="lang-ne">
+                पुराणहरूका अनुसार यही रात शिवले सृष्टि र संहारको ताण्डव नृत्य
+                नचिकनुभएको थियो। अर्को कथाअनुसार बेलको रूखमा अलपत्र परेका एक
+                शिकारीले अनजानमा बेलपत्र र जल तलको शिवलिंगमाथि झार्दै रातभर
+                जागरण गरेका थिए — बिहान उनका सबै पाप धुलिए। अनजान भक्तिले पनि
+                अनुग्रह पाइन्छ भन्ने यही कथा शिवरात्रिको आत्मा हो।
+              </span>
+              <span className="lang-en">
+                The Puranas describe this as the night Shiva performed the
+                tandava, the cosmic dance of creation and destruction. Another
+                beloved legend tells of a hunter stranded overnight in a bel
+                tree who unknowingly dropped bilva leaves and water onto a Shiva
+                lingam below while keeping a hungry vigil — by dawn his sins were
+                washed away. Even unintentional devotion, the story teaches,
+                earns Shiva&apos;s grace.
+              </span>
             </p>
             <p>
-              Astrologically, Falgun Krishna Chaturdashi places the moon at its
-              darkest, and devotees believe planetary positions on this night
-              amplify spiritual practice manyfold — which is precisely why
-              Shiva, the lord who conquered time itself, is worshipped in the
-              dark rather than the light.
+              <span className="lang-ne">
+                सबैभन्दा प्रचलित मान्यताअनुसार यही रात शिव अनन्त ज्योतिर्लिंगका
+                रूपमा प्रकट हुनुभएको थियो — जसको आदि र अन्त ब्रह्मा र विष्णुले
+                पनि पत्ता लगाउन सकेनन्। यो रात चन्द्रमा सबैभन्दा अन्धकार हुने
+                भएकाले समयका स्वामी शिवको पूजा अँध्यारोमै गरिन्छ; यो रातमा
+                गरिने पूजा-अनुष्ठानको फल अनेकगुणा बढी हुने ज्योतिषीय मान्यता
+                छ।
+              </span>
+              <span className="lang-en">
+                The most popular tradition says Shiva appeared as an endless
+                pillar of light — the Jyotirlinga — whose ends even Brahma and
+                Vishnu could not find. Because the moon is at its darkest this
+                night, Shiva, the lord who conquered time itself, is worshipped
+                in darkness; astrology holds that spiritual practice on this
+                night bears fruit manyfold.
+              </span>
             </p>
           </div>
         </section>
@@ -164,119 +184,107 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Pashupatinath: The Heart of the Celebration
+              <span className="lang-ne">शिवरात्रि कसरी मनाइन्छ?</span>
+              <span className="lang-en">How Shivaratri Is Celebrated</span>
             </h2>
             <p className="mb-4">
-              Pashupatinath, the pagoda temple on the Bagmati river, opens its
-              four gates at 3 a.m. and does not close until late the next
-              night. The Pashupati Area Development Trust organizes four rounds
-              of special abhishekam with milk, honey, ghee, sugarcane juice and
-              holy water, while priests offer thousands of bilva leaves to the
-              main lingam. Queues stretch kilometers along the riverbank;
-              volunteers distribute free water, tea and blankets through the
-              freezing night.
+              <span className="lang-ne">
+                पशुपतिनाथका चारै ढोका बिहान तीन बजे खुल्छन् र भोलिपल्टसम्म
+                बन्द हुँदैनन्। दूध, मह, घिउ, उखुको रस र पवित्र जलले चार पालो
+                विशेष अभिषेक गराइन्छ; पुरोहितहरू मुख्य लिंगमा हजारौं बेलपत्र
+                चढाउँछन्। बागमती किनारमा किलोमिटरौं लामा लाइन लाग्छ।
+              </span>
+              <span className="lang-en">
+                Pashupatinath&apos;s four gates open at 3 a.m. and stay open
+                until late the next night. Four rounds of special abhishekam are
+                performed with milk, honey, ghee, sugarcane juice and holy
+                water, while priests offer thousands of bilva leaves to the main
+                lingam. Queues stretch kilometers along the Bagmati riverbank.
+              </span>
             </p>
             <p>
-              Across the river, terraced platforms turn into an open-air theater
-              of asceticism. Naga sadhus — naked, bodies coated in vibhuti ash,
-              hair matted high — arrive in processions with tridents and drums,
-              smoking chillums and blessing crowds. Marijuana use, illegal
-              otherwise, is traditionally tolerated among sadhus on this night
-              alone, tying modern law to ancient Shaivite practice. Foreign
-              visitors photograph freely outside the main temple, where
-              bhajan mandalis sing till dawn and the air smells of dhoop,
-              marigold and woodsmoke.
+              <span className="lang-ne">
+                नदी पारिपट्टि भस्म लिपेका नागा साधुहरू त्रिशूल र डमरुसहित
+                शोभायात्रा निकाल्छन्। भक्तहरूले निर्जला वा फलाहार व्रत बसी
+                रातभर जागरण गर्छन् — &quot;ॐ नमः शिवाय&quot; र महामृत्युञ्जय
+                मन्त्रको जाप भईरहन्छ। घरघरमा पनि शिवलिंगमाथि जलाभिषेक गरी
+                बेलपत्र, धतुरा र सेतो फूल चढाइन्छ।
+              </span>
+              <span className="lang-en">
+                Across the river, ash-covered naga sadhus arrive in processions
+                with tridents and drums, blessing the crowds. Devotees observe
+                nirjala or phalahar fasts and keep an all-night vigil — jaagaran
+                — chanting &quot;Om Namah Shivaya&quot; and the Mahamrityunjaya
+                mantra. In homes, families pour water over household lingams and
+                offer bilva leaves, dhatura and white flowers.
+              </span>
             </p>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:gap-x-20">
-            <div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Fasting Traditions
-              </h2>
-              <p className="mb-4">
-                Devotees observe three levels of vrat:{" "}
-                <strong>nirjala</strong> (absolute, without food or water),
-                <strong> phalahar</strong> (fruits, milk and root vegetables
-                only), or a simple single satvik meal after evening puja. Many
-                begin fasting at sunrise and break it only the next morning
-                after bathing. The strictest keep an all-night vigil —{" "}
-                <em>jaagaran</em> — believing that sleeping on Shivaratri
-                forfeits the year&apos;s blessings, since legend warns that
-                even unintentional wakefulness that night earns merit.
-              </p>
-              <p>
-                Homes are cleaned, lamps lit before household lingams, and
-                offerings of bel leaves, dhatura fruit, belpatra malas and
-                white flowers are made — never tulsi, which Shiva famously
-                excludes.
-              </p>
-            </div>
-            <div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Shiva &amp; Marriage Blessings
-              </h2>
-              <p className="mb-4">
-                Shivaratri is also the festival of ideal wedlock. Shiva and
-                Parvati are said to have been (re)united on this night, so
-                unmarried women fast through the day praying for a husband as
-                devoted as Shiva, while married couples pray for harmony and
-                longevity together. At Pashupatinath&apos;s ghats, rows of
-                young women in red can be seen offering flowers to the
-                Bagmati&apos;s edge before joining the temple queues.
-              </p>
-              <p>
-                The night carries astrological weight too: jyotishis recommend
-                starting mantra sadhana, wearing rudraksha for the first time,
-                or performing Rudrabhishek on this tithi for maximum effect.
-                Read more on our{" "}
-                <a href="/jyotish/" className="underline">
-                  jyotish page
-                </a>
-                .
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="mb-8 text-3xl font-bold md:text-4xl">
-              Common Prayers &amp; Mantras
-            </h2>
-            <ul className="grid gap-6 md:grid-cols-3">
-              {mantras.map((m) => (
-                <li
-                  key={m.name}
-                  className="rounded-lg border border-border-primary p-6"
-                >
-                  <h3 className="mb-2 text-lg font-semibold">{m.name}</h3>
-                  <p>{m.detail}</p>
-                </li>
-              ))}
-            </ul>
           </div>
         </section>
 
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">घुम्न आउनेहरूका लागि सुझाव</span>
+              <span className="lang-en">Tips for Visitors</span>
+            </h2>
+            <p className="mb-4">
+              <span className="lang-ne">
+                पशुपतिनाथ पुग्न बिहानै निस्कनुहोस् — दिउँसो लाइन घण्टौं लामो
+                हुन्छ। फागुनको रात जाडो हुने भएकाले न्यानो लुगा लगाउनुहोस्।
+                मुख्य मन्दिर भित्र गैर-हिन्दूलाई प्रवेश निषेध छ; बाहिरी क्षेत्रमा
+                भजन, साधु र अनुष्ठानका तस्बिर लिन सकिन्छ।
+              </span>
+              <span className="lang-en">
+                Set out early — by midday the queues stretch for hours. Falgun
+                nights are freezing, so dress warm. Non-Hindus cannot enter the
+                main temple, but the outer ghats offer wonderful views of bhajan
+                singers, sadhus and rituals, with photography allowed outside.
+              </span>
+            </p>
+            <p>
+              <span className="lang-ne">
+                भीडभाड र आफ्ना सामानको विशेष ध्यान दिनुहोस्। साधुहरूको फोटो
+                खिच्नुअघि स्नेहपूर्वक अनुमति लिनुहोस्। तिथि पुष्टि गर्न{" "}
+                <a href="/calendar/" className="underline">
+                  पात्रो
+                </a>{" "}
+                हेर्नुहोस् र यो अद्भुत रातको अनुभव लिनुहोस्।
+              </span>
+              <span className="lang-en">
+                Watch your belongings in the massive crowds and always ask
+                kindly before photographing sadhus. Confirm exact dates on our{" "}
+                <a href="/calendar/" className="underline">
+                  calendar
+                </a>{" "}
+                and experience this extraordinary night for yourself.
+              </span>
+            </p>
+          </div>
+        </section>
+
+        <section className="px-[5%] py-16 md:py-24">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
+              <span className="lang-ne">सम्बन्धित पृष्ठहरू</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/festival/chhath/" className="underline">
-                Previous festival: Chhath
+                <span className="lang-ne">अघिल्लो पर्व: छठ</span>
+                <span className="lang-en">Previous festival: Chhath</span>
               </a>
               <a href="/festival/holi/" className="underline">
-                Next festival: Holi
+                <span className="lang-ne">अर्को पर्व: होली</span>
+                <span className="lang-en">Next festival: Holi</span>
               </a>
               <a href="/month/falgun/" className="underline">
-                Month of Falgun
+                <span className="lang-ne">फागुन महिना</span>
+                <span className="lang-en">Month of Falgun</span>
               </a>
               <a href="/calendar/" className="underline">
-                Today&apos;s Tithi
+                <span className="lang-ne">आजको तिथि</span>
+                <span className="lang-en">Today&apos;s Tithi</span>
               </a>
             </div>
           </div>

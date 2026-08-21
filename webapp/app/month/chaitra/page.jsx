@@ -3,20 +3,23 @@ import { Navbar9 } from "@/components/Navbar9";
 import { Footer4 } from "@/components/Footer4";
 
 export const metadata = {
-  title: "चैत्र महिना — Chaitra 2083 | Last Month of Bikram Sambat",
+  title: "चैत्र महिना — Chaitra Month | March-April",
   description:
-    "चैत्र (Chaitra) is the twelfth and final month of Bikram Sambat, featuring Chaite Dashain, Ram Navami, Ghode Jatra and new year preparations. Explore its festivals, spring weather, farming and astrology.",
+    "चैत्र (Chaitra) is the twelfth and final month of Bikram Sambat, falling in March-April. Explore Ghode Jatra, Ram Navami, Chaitra Dashain, peak spring weather and Nepali New Year preparations.",
   keywords: [
     "chaitra",
     "chaitra month",
+    "चैत्र",
     "चैत्र महिना",
-    "ghode jatra kathmandu",
-    "chaite dashain ram navami",
-    "nepali year end",
+    "ghode jatra",
+    "घोडे जात्रा",
+    "ram navami",
+    "राम नवमी",
+    "chaitra dashain",
+    "चैत्र दशैं",
+    "nepali new year",
     "nepali calendar chaitra",
-    "meena sankranti",
-    "chitra nakshatra",
-    "seto machhindranath jatra",
+    "last month bikram sambat",
   ],
   alternates: {
     canonical: "https://nepalicalendar.kebinmaharjan.com.np/month/chaitra/",
@@ -50,24 +53,55 @@ const breadcrumbJsonLd = {
 
 const festivals = [
   {
-    name: "चैते दशैँ (Chaite Dashain)",
-    detail:
-      "A miniature Dashain on Chaitra Shukla Ashtami-Dashami, when devotees offer Durga puja and some households perform sacrifices recalling the Ram-Ravana war.",
+    nameNe: "घोडे जात्रा",
+    nameEn: "Ghode Jatra",
+    detailNe:
+      "काठमाडौंको टुँडिखेलमा नेपाली सेनाले घोडदौड प्रदर्शनी गर्छ। परम्परा अनुसार राक्षस ताडीको सम्झनामा घोडाहरूले मैदान दौडँदा भूतप्रेतहरू भगाइन्छ र सहर रक्षा हुन्छ भन्ने विश्वास छ।",
+    detailEn:
+      "The Nepal Army stages a grand horse parade at Tundikhel, Kathmandu. Tradition holds that thundering hooves trample the demon Tundi's spirit, driving away ghosts and protecting the city — now a beloved spectacle of cavalry drills and acrobatics.",
   },
   {
-    name: "राम नवमी (Ram Navami)",
-    detail:
-      "Temples recite the Ramayana and processions carry idols of Ram through Janakpur and Kathmandu to celebrate his birth.",
+    nameNe: "राम नवमी",
+    nameEn: "Ram Navami",
+    detailNe:
+      "चैत्र शुक्ल नवमीमा भगवान् रामको जन्मोत्सव मनाइन्छ। राम मन्दिरहरूमा पूजा, भजन र रामायण पाठ हुन्छ; जनकपुरधाम र काठमाडौंका मन्दिरहरू भक्तहरूले भरिन्छन्।",
+    detailEn:
+      "Chaitra Shukla Navami celebrates the birth of Lord Ram. Temples hold puja, bhajans and Ramayana recitals, with Janakpurdham and Kathmandu shrines drawing large crowds of devotees.",
   },
   {
-    name: "घोडेजात्रा (Ghode Jatra)",
-    detail:
-      "The Nepal Army parades galloping horses across Tundikhel, a ritual said to trample the resting place of the demon Tundi and keep Kathmandu safe.",
+    nameNe: "चैत्र दशैं (चैते दशैं)",
+    nameEn: "Chaitra Dashain",
+    detailNe:
+      "अश्विनको ठूलो दशैंको छाया परेको चैते दशैंमा दुर्गा पूजा, नवदुर्गा भजन र बलि चढाइ हुन्छ। नवरात्रभरि मन्दिरहरूमा भक्तहरूको घुइँचो लाग्छ।",
+    detailEn:
+      "A miniature of the great autumn Dashain, Chaitra Dashain brings nine nights of Durga worship, navadurga hymns and ritual offerings. Temple courtyards stay busy with devotees through the navaratri.",
+  },
+];
+
+const quickFacts = [
+  {
+    labelNe: "महिना",
+    labelEn: "Month",
+    valueNe: "मार्च-अप्रिल",
+    valueEn: "March-April",
   },
   {
-    name: "सेतो मच्छिन्द्रनाथ यात्रा",
-    detail:
-      "The white rain deity of Kathmandu is pulled in a tall chariot from Jamal to Lagan, blessing the valley before the paddy cycle restarts.",
+    labelNe: "मुख्य पर्व",
+    labelEn: "Key Festivals",
+    valueNe: "घोडे जात्रा, राम नवमी, चैत्र दशैं",
+    valueEn: "Ghode Jatra, Ram Navami, Chaitra Dashain",
+  },
+  {
+    labelNe: "मौसम",
+    labelEn: "Weather",
+    valueNe: "बसन्त चरम, नयाँ वर्ष नजिक",
+    valueEn: "Peak spring, New Year nears",
+  },
+  {
+    labelNe: "संस्कृति",
+    labelEn: "Culture",
+    valueNe: "वर्ष अन्तिम महिना, नयाँ वर्षको तयारी",
+    valueEn: "Final month of the year, New Year prep",
   },
 ];
 
@@ -83,22 +117,43 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · बाह्रौँ महिना
+              <span className="lang-ne">
+                विक्रम संवत् · बाह्रौँ महिना · मार्च-अप्रिल
+              </span>
+              <span className="lang-en">
+                Vikram Samvat · Twelfth Month · March-April
+              </span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              चैत्र महिना — Chaitra 2083
+              <span className="lang-ne">चैत्र महिना</span>
+              <span className="lang-en">Chaitra Month</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              चैत्र, from mid-March to mid-April, closes the Bikram Sambat
-              year with energy rather than rest. Spring storms roll over
-              ripening wheat, students sit final exams, accountants close
-              fiscal books, and Kathmandu thunders with Ghode Jatra — all
-              while families prepare to welcome Naya Barsha. Count down the
-              remaining days on our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              and step into the new year prepared.
+              <span className="lang-ne">
+                चैत्र विक्रम संवत्को बाह्रौँ र अन्तिम महिना हो, जुन मार्चदेखि
+                अप्रिलसम्म पर्छ। बसन्त ऋतु चरममा पुग्छ, आकाश फूलहरूले
+                रङ्गिन हुन्छ र नयाँ वर्ष नजिकिँदै गर्दा सहरहरू उत्सवको
+                तयारीमा व्यस्त हुन्छन्। टुँडिखेलको घोडे जात्रा, राम नवमीको
+                भक्ति र चैत्र दशैंको नवरात्रले वर्षलाई भव्य विदाइ दिन्छन्।
+                तिथि र पर्व{" "}
+                <a href="/calendar/" className="underline">
+                  नेपाली पात्रो
+                </a>{" "}
+                मा हेर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Chaitra is the twelfth and final month of Bikram Sambat,
+                spanning March to April. Spring peaks, skies turn flower-bright,
+                and with the Nepali New Year approaching, cities buzz with
+                festive preparation. Ghode Jatra&apos;s thundering parade at
+                Tundikhel, the devotion of Ram Navami and the nine nights of
+                Chaitra Dashain give the year a grand send-off. Find tithis
+                and festivals on our{" "}
+                <a href="/calendar/" className="underline">
+                  Nepali calendar
+                </a>
+                .
+              </span>
             </p>
           </div>
         </section>
@@ -106,41 +161,49 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              Year-End Rituals and Legends
+              <span className="lang-ne">एक नजरमा चैत्र</span>
+              <span className="lang-en">Chaitra at a Glance</span>
             </h2>
-            <p className="mb-4">
-              Ghode Jatra is unique to the valley. Medieval chronicles say the
-              demon Tundi was killed and buried beneath what is now Tundikhel;
-              to prevent his revival, horses are raced over the ground each
-              year amid cheering crowds and acrobatic displays by army riders.
-              The same fortnight brings Seto Machhindranath&apos;s chariot
-              swaying down Kathmandu&apos;s narrow lanes, its white deity
-              asked for timely monsoon rains once more.
-            </p>
-            <p>
-              Chaitra also carries a quieter, devotional side. Observant
-              Hindus mark Chaitra Navaratri with nine days of fasting, and
-              Ram Navami fills Ayodhya-linked Janakpur with pilgrims. In
-              offices and shops, the month means halkhabar — closing ledgers,
-              clearing credit and starting fresh notebooks for Baisakh 1, an
-              accounting tradition older than modern software.
-            </p>
+            <ul className="grid gap-6 md:grid-cols-2">
+              {quickFacts.map((f) => (
+                <li
+                  key={f.labelEn}
+                  className="rounded-lg border border-border-primary p-6"
+                >
+                  <h3 className="mb-2 text-xl font-semibold">
+                    <span className="lang-ne">{f.labelNe}</span>
+                    <span className="lang-en">{f.labelEn}</span>
+                  </h3>
+                  <p>
+                    <span className="lang-ne">{f.valueNe}</span>
+                    <span className="lang-en">{f.valueEn}</span>
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-              Major Festivals in Chaitra
+              <span className="lang-ne">चैत्रका मुख्य चाडपर्वहरू</span>
+              <span className="lang-en">Major Festivals in Chaitra</span>
             </h2>
             <ul className="grid gap-6 md:grid-cols-2">
               {festivals.map((f) => (
                 <li
-                  key={f.name}
+                  key={f.nameEn}
                   className="rounded-lg border border-border-primary p-6"
                 >
-                  <h3 className="mb-2 text-xl font-semibold">{f.name}</h3>
-                  <p>{f.detail}</p>
+                  <h3 className="mb-2 text-xl font-semibold">
+                    <span className="lang-ne">{f.nameNe}</span>
+                    <span className="lang-en">{f.nameEn}</span>
+                  </h3>
+                  <p>
+                    <span className="lang-ne">{f.detailNe}</span>
+                    <span className="lang-en">{f.detailEn}</span>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -151,47 +214,81 @@ export default function Page() {
           <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:gap-x-20">
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Weather &amp; Season
+                <span className="lang-ne">मौसम र ऋतु</span>
+                <span className="lang-en">Weather &amp; Season</span>
               </h2>
               <p className="mb-4">
-                Grishma knocks early. Afternoons in the Tarai cross 35°C,
-                Kathmandu turns breezy and dry, and sudden evening
-                thunderstorms with hail — kalbaishakhi again — refresh the
-                air. Water shortages peak in hill towns, forest-fire risk
-                rises, yet mornings remain ideal for rhododendron treks at
-                mid elevations before the heat climbs higher.
+                <span className="lang-ne">
+                  चैत्रमा बसन्त ऋतु चरममा पुग्छ। दिउँसो गर्मी बढ्छ, बतास
+                  चल्छ र कहिलेकाहीँ बोरा-आँधी आउँछ। फूलहरू फुल्छन्, रूखहरू
+                  नयाँ पात फुटाउँछन् र हिमाली आकाश सफा देखिन्छ। जेठको
+                  तपस्याअघि यो घुम्ने र उत्सव मनाउने उत्तम समय हो।
+                </span>
+                <span className="lang-en">
+                  Spring reaches its peak in Chaitra. Afternoons warm up,
+                  breezes pick up, and occasional nor&apos;wester thunderstorms
+                  roll through. Flowers bloom, trees burst new leaves, and
+                  mountain views stay crystal clear. It is a fine window for
+                  travel before the summer heat sets in.
+                </span>
               </p>
               <h2 className="mb-4 mt-8 text-3xl font-bold md:text-4xl">
-                Agriculture
+                <span className="lang-ne">कृषि र जीवनशैली</span>
+                <span className="lang-en">Agriculture &amp; Life</span>
               </h2>
               <p>
-                The wheat harvest begins in earnest toward month&apos;s end,
-                with golden sheaves drying on rooftops and highways. Farmers
-                sow moong and sesame after cutting, prepare maize fields for
-                Baisakh sowing, and stock fodder. Mango orchards hang heavy
-                with budding fruit, promising the litchi-and-mango abundance
-                that follows the new year.
+                <span className="lang-ne">
+                  गहुँ पाक्दै छ; किसानहरू कटाइको तयारी गर्छन् र धानका बीउ
+                  तयार पार्छन्। बजारहरूमा नयाँ वर्षको साइत, खरिदबिक्री र
+                  यात्राको चहलपहल बढ्छ।
+                </span>
+                <span className="lang-en">
+                  Wheat ripens as farmers ready the harvest and prepare rice
+                  nurseries. Markets hum with New Year shopping, travel
+                  bookings and muhurat planning for the year ahead.
+                </span>
               </p>
             </div>
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Astrological Significance
+                <span className="lang-ne">सांस्कृतिक महत्त्व</span>
+                <span className="lang-en">Cultural Significance</span>
               </h2>
               <p className="mb-4">
-                Meena Sankranti places the Sun in Meena (Pisces) rashi for
-                most of Chaitra, the final sign of the zodiac wheel that
-                completes just before Mesh Sankranti renews it. The month is
-                named for the Chitra nakshatra, whose presiding deity
-                Tvashtar, the celestial architect, inspires rebuilding and
-                planning — perfect symbolism for year-end audits and new-year
-                resolutions alike.
+                <span className="lang-ne">
+                  चैत्र वर्षको अन्तिम महिना भएकाले नयाँ वर्षको तयारीको
+                  महिना पनि हो। घोडे जात्रामा टुँडिखेल दर्शकहरूले भरिन्छ;
+                  नेवार परम्परामा यो जात्रा सहरको रक्षासँग जोडिएको छ। राम
+                  नवमीमा भक्तहरू उपवास बसेर रामको नाम जप्छन्। चैते दशैंमा
+                  नवदुर्गाको पूजा गरेर वर्षको अन्त्य शक्ति आराधनामा गरिन्छ।
+                  चैत्र अन्त्यसँगै वैशाख १ गते नयाँ वर्षको स्वागतमा भिमसेन
+                  स्तम्भ, शंखध्वनि र भेला-मेलाहरू हुन्छन्।
+                </span>
+                <span className="lang-en">
+                  As the final month of the year, Chaitra doubles as New Year
+                  preparation time. Ghode Jatra fills Tundikhel with
+                  spectators, its Newar roots tied to guarding the city. On
+                  Ram Navami devotees fast and chant Ram&apos;s name, while Chaitra
+                  Dashain closes the year with navadurga worship. When Chaitra
+                  ends, Bhimsen towers, conch calls and mass gatherings
+                  welcome Baisakh 1 — the Nepali New Year.
+                </span>
               </p>
               <p>
-                Preview next year&apos;s dates with our{" "}
-                <a href="/date-converter/" className="underline">
-                  BS–AD converter
-                </a>
-                .
+                <span className="lang-ne">
+                  BS र AD मिति तुरुन्तै तुलना गर्न हाम्रो{" "}
+                  <a href="/date-converter/" className="underline">
+                    मिति रूपान्तरण
+                  </a>{" "}
+                  प्रयोग गर्नुहोस्।
+                </span>
+                <span className="lang-en">
+                  Compare BS and AD dates instantly on our{" "}
+                  <a href="/date-converter/" className="underline">
+                    date converter
+                  </a>
+                  .
+                </span>
               </p>
             </div>
           </div>
@@ -200,23 +297,29 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">सम्बन्धित पृष्ठहरू</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/month/falgun/" className="underline">
-                Previous month: Falgun
+                <span className="lang-ne">अघिल्लो महिना: फागुन</span>
+                <span className="lang-en">Previous month: Falgun</span>
               </a>
               <a href="/month/baisakh/" className="underline">
-                Next month: Baisakh (New Year)
+                <span className="lang-ne">अर्को महिना: वैशाख</span>
+                <span className="lang-en">Next month: Baisakh</span>
               </a>
               <a href="/festival/ghode-jatra/" className="underline">
-                Ghode Jatra
+                <span className="lang-ne">घोडे जात्रा</span>
+                <span className="lang-en">Ghode Jatra</span>
               </a>
-              <a href="/festival/ram-navami/" className="underline">
-                Ram Navami
+              <a href="/2083/" className="underline">
+                <span className="lang-ne">नयाँ वर्ष २०८३</span>
+                <span className="lang-en">New Year 2083</span>
               </a>
-              <a href="/festival/naya-barsha/" className="underline">
-                Nepali New Year
+              <a href="/calendar/" className="underline">
+                <span className="lang-ne">पात्रो हेर्नुहोस्</span>
+                <span className="lang-en">View Calendar</span>
               </a>
             </div>
           </div>

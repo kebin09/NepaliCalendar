@@ -3,20 +3,13 @@ import { Navbar9 } from "@/components/Navbar9";
 import { Footer4 } from "@/components/Footer4";
 
 export const metadata = {
-  title: "श्रावण महिना — Shrawan 2083 | Nag Panchami & Janai Purnima",
+  title: "श्रावण महिना — Shrawan 2083 | Fourth Month of Nepali Calendar",
   description:
-    "श्रावण (Shrawan) is the fourth month of Bikram Sambat, famous for Nag Panchami, Shrawan Somvar fasting, Janai Purnima and the green monsoon landscape. Learn its festivals, farming and astrology.",
+    "श्रावण (Shrawan) is the fourth month of Bikram Sambat, sacred to Lord Shiva with Nag Panchami, Janai Purnima and the start of Chaturmas. Explore its festivals, weather and astrology.",
   keywords: [
-    "shrawan",
-    "shrawan month",
-    "श्रावण महिना",
-    "nag panchami",
-    "janai purnima",
-    "shrawan sombar vrat",
-    "chaturmas",
-    "nepali calendar shrawan",
-    "kwati festival",
-    "karka sankranti",
+    "shrawan", "shrawan month", "श्रावण महिना", "nepali calendar shrawan",
+    "nag panchami", "janai purnima", "chaturmas", "shrawan sombar",
+    "bikram sambat fourth month", "nepali month july august", "singha sankranti",
   ],
   alternates: {
     canonical: "https://nepalicalendar.kebinmaharjan.com.np/month/shrawan/",
@@ -27,78 +20,49 @@ const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://nepalicalendar.kebinmaharjan.com.np/",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Months",
-      item: "https://nepalicalendar.kebinmaharjan.com.np/calendar/",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "Shrawan",
-      item: "https://nepalicalendar.kebinmaharjan.com.np/month/shrawan/",
-    },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://nepalicalendar.kebinmaharjan.com.np/" },
+    { "@type": "ListItem", position: 2, name: "Months", item: "https://nepalicalendar.kebinmaharjan.com.np/calendar/" },
+    { "@type": "ListItem", position: 3, name: "Shrawan", item: "https://nepalicalendar.kebinmaharjan.com.np/month/shrawan/" },
   ],
 };
 
 const festivals = [
   {
-    name: "नाग पञ्चमी (Nag Panchami)",
-    detail:
-      "On Shrawan Shukla Panchami, devotees paste pictures of Nagas above doorways and offer milk at serpent shrines such as Nagpokhari and Taudaha for protection from snakebite.",
+    nameNe: "नाग पञ्चमी", nameEn: "Nag Panchami",
+    detailNe: "श्रावण शुक्ल पञ्चमीमा नागको तस्बिर ढोकामा टाँगेर दूध, अक्षता र दुबो चढाइन्छ। सर्पदंशबाट सुरक्षाको कामना गरिन्छ।",
+    detailEn: "On Shukla Panchami, pictures of serpents are pasted above doorways with offerings of milk, rice and dubo grass, praying for protection from snake bites.",
   },
   {
-    name: "जनै पूर्णिमा (Janai Purnima)",
-    detail:
-      "Tagadhar men renew the sacred janai thread, priests tie raksha sutra on wrists, and Newar households cook kwati — a nine-bean sprout soup symbolizing warmth and nutrition.",
+    nameNe: "जनै पूर्णिमा", nameEn: "Janai Purnima",
+    detailNe: "जनैधारीहरूले पवित्र स्नान गरी नयाँ जनै लगाउँछन्। पुरोहितले रक्षाबन्धन बाँध्छन्; नेवार समुदायले क्वटी महोत्सव मनाउँछन्।",
+    detailEn: "Tagadhari Hindus bathe at holy rivers and change their sacred thread. Priests tie raksha bandhan threads, while Newars celebrate Kwati with a nine-bean sprout feast.",
   },
   {
-    name: "सोमबार ब्रत (Shrawan Somvar Vrat)",
-    detail:
-      "Every Monday of the month, devotees fast and pour milk over Shiva lingams, with Pashupatinath drawing enormous queues from dawn till late night.",
-  },
-  {
-    name: "हरिशयनी एकादशी र चतुर्मास",
-    detail:
-      "The sleeping of Lord Vishnu marks the start of Chaturmas, four months of restrained celebration, extra devotion and pilgrimage.",
+    nameNe: "चतुर्मास सुरु", nameEn: "Chaturmas Begins",
+    detailNe: "चार महिना लामो चतुर्मासको सुरुवात — भगवान् विष्णुको निद्रा काल। विवाहजस्ता शुभ कार्य रोकिन्छन्, भक्ति र व्रत बढ्छन्।",
+    detailEn: "The four-month holy period of Chaturmas begins — Lord Vishnu's slumber. Weddings pause while devotion, fasting and pilgrimage intensify.",
   },
 ];
 
 export default function Page() {
   return (
     <div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <Navbar9 />
       <main>
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · चौथो महिना
+              <span className="lang-ne">विक्रम संवत् २०८३ · चौथो महिना</span>
+              <span className="lang-en">Bikram Sambat 2083 · Fourth Month</span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              श्रावण महिना — Shrawan 2083
+              <span className="lang-ne">श्रावण महिना</span>
+              <span className="lang-en">Shrawan Month</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              श्रावण, spanning mid-July to mid-August, is the wettest and one
-              of the most devotional months of the Nepali year. Rain drums on
-              tin roofs while temple courtyards fill with devotees carrying
-              milk pots and kanwar water for Lord Shiva. To keep track of
-              Somvar vrat dates, Nag Panchami and Janai Purnima, thousands
-              rely on our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              throughout the month.
+              <span className="lang-ne">श्रावण विक्रम संवत्को चौथो महिना हो। जुलाई मध्यदेखि अगस्ट मध्यसम्म चल्ने यो महिना भगवान् शिवको नाममा सबैभन्दा पवित्र मानिन्छ।</span>
+              <span className="lang-en">Shrawan is the fourth month of the Bikram Sambat calendar. Running from mid-July to mid-August, it is considered the holiest month in devotion to Lord Shiva.</span>
             </p>
           </div>
         </section>
@@ -106,24 +70,16 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              Why Shrawan Is Sacred
+              <span className="lang-ne">श्रावणको महत्त्व</span>
+              <span className="lang-en">Significance of Shrawan</span>
             </h2>
             <p className="mb-4">
-              Shrawan belongs to Shiva. According to legend, the churning of
-              the ocean (Samudra Manthan) released halahala poison, which
-              Shiva swallowed to protect creation; the waters of Shravana are
-              said to carry that purifying memory, which is why bathing and
-              abhishekam gain special merit now. Every Monday, married women
-              and young devotees observe strict fasts, believing the vrat
-              brings marital harmony and fulfilled wishes.
+              <span className="lang-ne">श्रावण आध्यात्मिक उर्जाले भरिएको महिना हो। सोमबारहरूमा शिव मन्दिरहरू भक्तहरूले भरिन्छन्; विशेष गरी महिलाहरूले व्रत बसेर पार्वतीजस्तै सुखी दाम्पत्य जीवनको कामना गर्छन्।</span>
+              <span className="lang-en">Shrawan pulses with spiritual energy. Every Monday, Shiva temples overflow with devotees — especially women fasting for a blissful married life like Parvati's.</span>
             </p>
             <p>
-              The month also opens Chaturmas, the holy four-month residence
-              of Vishnu in cosmic sleep. Weddings, bratabandha and housewarmings
-              pause, while katha recitals, Ekadashi observances and pilgrimages
-              multiply. Kanwar pilgrims walk miles carrying Ganga jal from
-              Trishuli and Bagmati ghats to offer at Pashupatinath, turning
-              highways into rivers of saffron-clad devotion.
+              <span className="lang-ne">यो महिनाबाट चतुर्मास सुरु हुन्छ, जसमा विवाह र ठूला शुभ कार्यहरू रोकिन्छन् र भक्ति, दान र अध्ययनमा जोड दिइन्छ।</span>
+              <span className="lang-en">The month opens Chaturmas, when weddings and grand ceremonies pause in favor of devotion, charity and scriptural study.</span>
             </p>
           </div>
         </section>
@@ -131,16 +87,20 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-              Major Festivals in Shrawan
+              <span className="lang-ne">श्रावणका प्रमुख चाडपर्व</span>
+              <span className="lang-en">Major Festivals in Shrawan</span>
             </h2>
             <ul className="grid gap-6 md:grid-cols-2">
               {festivals.map((f) => (
-                <li
-                  key={f.name}
-                  className="rounded-lg border border-border-primary p-6"
-                >
-                  <h3 className="mb-2 text-xl font-semibold">{f.name}</h3>
-                  <p>{f.detail}</p>
+                <li key={f.nameEn} className="rounded-lg border border-border-primary p-6">
+                  <h3 className="mb-2 text-xl font-semibold">
+                    <span className="lang-ne">{f.nameNe}</span>
+                    <span className="lang-en">{f.nameEn}</span>
+                  </h3>
+                  <p>
+                    <span className="lang-ne">{f.detailNe}</span>
+                    <span className="lang-en">{f.detailEn}</span>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -151,48 +111,34 @@ export default function Page() {
           <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:gap-x-20">
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Weather &amp; Season
+                <span className="lang-ne">मौसम र प्रकृति</span>
+                <span className="lang-en">Weather &amp; Season</span>
               </h2>
               <p className="mb-4">
-                Shrawan sits at peak monsoon. Rainfall totals often exceed 300
-                mm in Kathmandu and far more along the Annapurna foothills.
-                Rivers run chocolate-brown, leeches patrol jungle trails, and
-                humidity clings to everything. Yet the countryside is at its
-                most photogenic — rice paddies mirror the sky and every hill
-                looks freshly painted green.
+                <span className="lang-ne">श्रावणमा मनसुन चरममा पुग्छ। निरन्तर वर्षाले बाढी र पहिरोको जोखिम बढाउँछ; खेतबारी र नदीनाला भरिन्छन्।</span>
+                <span className="lang-en">Shrawan brings the monsoon to its peak. Continuous rainfall raises risks of floods and landslides while fields and rivers brim with water.</span>
               </p>
               <h2 className="mb-4 mt-8 text-3xl font-bold md:text-4xl">
-                Agriculture
+                <span className="lang-ne">कृषि</span>
+                <span className="lang-en">Agriculture</span>
               </h2>
               <p>
-                With transplantation complete, farmers shift to care: weeding
-                paddies, applying manure and guarding against pests that thrive
-                in damp heat. Maize dries in lofts, millet seedlings are
-                transplanted on slopes, and kitchen gardens overflow with
-                pumpkins, beans and iskus (spiny gourd) that define monsoon
-                cooking.
+                <span className="lang-ne">धानका बाली हरिया हुँदै बढ्छन्। किसानहरू झारपात, मल र कीट व्यवस्थापनमा व्यस्त हुन्छन्; तरकारी बाली फस्टाउँछन्।</span>
+                <span className="lang-en">Paddy crops flourish in the rain. Farmers stay busy weeding, fertilizing and managing pests while vegetable gardens thrive.</span>
               </p>
             </div>
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Astrological Significance
+                <span className="lang-ne">ज्योतिषीय महत्त्व</span>
+                <span className="lang-en">Astrological Significance</span>
               </h2>
               <p className="mb-4">
-                The Sun moves through Karka (Cancer) rashi for most of
-                Shrawan, having entered at Karka Sankranti that opened
-                Dakshinayana. The month is named for the Shravana nakshatra,
-                ruled by Vishnu himself, which explains why thread renewal and
-                Vishnu-related vrats cluster here. Jupiter&apos;s influence on
-                Thursdays and Shiva&apos;s on Mondays make these weekdays
-                especially potent for worship according to traditional
-                panchang readers.
+                <span className="lang-ne">सिंह संक्रान्तिपछि सूर्य सिंह (लियो) राशिमा प्रवेश गर्छ। श्रवण नक्षत्रबाट यस महिनाको नाम परेको हो।</span>
+                <span className="lang-en">After Singha Sankranti, the Sun enters Leo. The month is named after the Shravana nakshatra, the listening star of Vishnu.</span>
               </p>
               <p>
-                Read weekday-wise guidance on our{" "}
-                <a href="/jyotish/" className="underline">
-                  jyotish
-                </a>{" "}
-                page.
+                <span className="lang-ne">श्रावण सोमबार र शुक्रबार व्रतका लागि अत्यन्त शुभ मानिन्छ; शिव-पार्वती पूजाको फल अनेक गुणा बढ्छ भनिन्छ।</span>
+                <span className="lang-en">Shrawan Mondays and Fridays are highly auspicious for fasting — worship of Shiva and Parvati is said to yield manifold blessings.</span>
               </p>
             </div>
           </div>
@@ -201,23 +147,21 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">थप पृष्ठहरू हेर्नुहोस्</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/month/ashadh/" className="underline">
-                Previous month: Ashadh
+                <span className="lang-ne">अघिल्लो महिना: असार</span>
+                <span className="lang-en">Previous month: Ashadh</span>
               </a>
               <a href="/month/bhadra/" className="underline">
-                Next month: Bhadra
+                <span className="lang-ne">अर्को महिना: भाद्र</span>
+                <span className="lang-en">Next month: Bhadra</span>
               </a>
-              <a href="/festival/nag-panchami/" className="underline">
-                Nag Panchami
-              </a>
-              <a href="/festival/janai-purnima/" className="underline">
-                Janai Purnima
-              </a>
-              <a href="/calendar/" className="underline">
-                Today&apos;s Tithi
+              <a href="/date-converter/" className="underline">
+                <span className="lang-ne">मिति रूपान्तरण</span>
+                <span className="lang-en">Date Converter</span>
               </a>
             </div>
           </div>

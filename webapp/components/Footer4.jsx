@@ -11,14 +11,14 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 
 const footerLinks = [
-  { title: "गृहपृष्ठ", href: "/home" },
-  { title: "पात्रो", href: "/calendar" },
-  { title: "ज्योतिष", href: "/rashifal" },
-  { title: "समाचार", href: "/news" },
-  { title: "उपकरण", href: "/converter" },
-  { title: "हाम्रो बारेमा", href: "/about/" },
-  { title: "गोपनीयता नीति", href: "/privacy/" },
-  { title: "सम्पर्क", href: "/contact/" },
+  { ne: "गृहपृष्ठ", en: "Home", href: "/home" },
+  { ne: "पात्रो", en: "Calendar", href: "/calendar" },
+  { ne: "ज्योतिष", en: "Horoscope", href: "/rashifal" },
+  { ne: "समाचार", en: "News", href: "/news" },
+  { ne: "उपकरण", en: "Tools", href: "/converter" },
+  { ne: "हाम्रो बारेमा", en: "About", href: "/about/" },
+  { ne: "गोपनीयता नीति", en: "Privacy", href: "/privacy/" },
+  { ne: "सम्पर्क", en: "Contact", href: "/contact/" },
 ];
 
 const socialLinks = [
@@ -53,21 +53,25 @@ export function Footer4() {
           <Link
             href="/home"
             className="flex items-center gap-2 lg:justify-self-start"
-            aria-label="नेपाली पात्रो गृहपृष्ठ"
+            aria-label="Nepali Calendar Homepage"
           >
             <img
               src="/logo.svg"
-              alt="नेपाली पात्रो"
+              alt="Nepali Calendar"
               className="inline-block"
             />
             <span className="whitespace-nowrap text-lg font-bold leading-none">
-              नेपाली पात्रो
+              <span className="lang-ne">नेपाली पात्रो</span>
+              <span className="lang-en">Nepali Calendar</span>
             </span>
           </Link>
           <ul className="grid grid-flow-row grid-cols-1 items-start justify-center justify-items-center gap-6 md:grid-flow-col md:grid-cols-[max-content] md:justify-center md:justify-items-start">
             {footerLinks.map((link) => (
-              <li key={link.title} className="font-semibold">
-                <Link href={link.href}>{link.title}</Link>
+              <li key={link.href} className="font-semibold">
+                <Link href={link.href}>
+                  <span className="lang-ne">{link.ne}</span>
+                  <span className="lang-en">{link.en}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -89,7 +93,8 @@ export function Footer4() {
         <div className="flex flex-col-reverse items-center justify-center justify-items-center pb-4 pt-6 text-sm md:flex-row md:gap-x-6 md:pb-0 md:pt-8">
           <ul className="grid grid-flow-row grid-cols-[max-content] items-center justify-center justify-items-center gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
             <p className="mt-8 md:mt-0">
-              © {new Date().getFullYear()} नेपाली पात्रो। सर्वाधिकार सुरक्षित।
+              <span className="lang-ne">© {new Date().getFullYear()} नेपाली पात्रो। सर्वाधिकार सुरक्षित।</span>
+              <span className="lang-en">© {new Date().getFullYear()} Nepali Calendar. All rights reserved.</span>
             </p>
           </ul>
         </div>

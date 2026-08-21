@@ -29,16 +29,24 @@ export function BlogPostHeader1() {
           <Breadcrumb className="mb-6 flex w-full items-center">
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="#">राशिफल</BreadcrumbLink>
+                <BreadcrumbLink href="#">
+                  <span className="lang-ne">राशिफल</span>
+                  <span className="lang-en">Rashifal</span>
+                </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="#">दैनिक</BreadcrumbLink>
+                <BreadcrumbLink href="#">
+                  <span className="lang-ne">दैनिक</span>
+                  <span className="lang-en">Daily</span>
+                </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
           <h1 className="mb-8 text-5xl font-bold md:mb-10 md:text-7xl lg:mb-12 lg:text-8xl">
-            {dateStr} को दैनिक राशिफल सबै १२ राशिहरूको लागि
+            {dateStr}{" "}
+            <span className="lang-ne">को दैनिक राशिफल सबै १२ राशिहरूको लागि</span>
+            <span className="lang-en">Daily Rashifal for All 12 Zodiac Signs</span>
           </h1>
           <div className="flex w-full flex-col items-start justify-between sm:flex-row sm:items-end">
             <div className="rb-4 mb-4 flex items-center sm:mb-0">
@@ -50,11 +58,17 @@ export function BlogPostHeader1() {
                 />
               </div>
               <div>
-                <h6 className="font-semibold">हाम्रो पात्रो</h6>
+                <h6 className="font-semibold">
+                  <span className="lang-ne">हाम्रो पात्रो</span>
+                  <span className="lang-en">Our Patro</span>
+                </h6>
                 <div className="mt-1 flex">
                   <p className="text-sm">{dateStr}</p>
                   <span className="mx-2">•</span>
-                  <p className="text-sm">८ मिनेट</p>
+                  <p className="text-sm">
+                    <span className="lang-ne">८ मिनेट</span>
+                    <span className="lang-en">8 min read</span>
+                  </p>
                 </div>
               </div>
             </div>

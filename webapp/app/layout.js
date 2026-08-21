@@ -1,5 +1,6 @@
 import { Inter, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -144,7 +145,7 @@ const webAppSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ne">
+    <html lang="ne" data-lang="ne" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -162,7 +163,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} ${notoSansDevanagari.variable} antialiased`}
       >
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

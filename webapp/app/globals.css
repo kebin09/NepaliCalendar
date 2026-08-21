@@ -10,3 +10,11 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+html[data-lang="ne"] .lang-en {
+  display: none !important;
+}
+
+html[data-lang="en"] .lang-ne {
+  display: none !important;
+}

@@ -29,8 +29,14 @@ export function DailyRashifal() {
     <section id="relume" className="px-[5%] py-16 md:py-24">
       <div className="container">
         <div className="mx-auto mb-12 max-w-lg text-center md:mb-16">
-          <p className="mb-3 font-semibold md:mb-4">हरेक दिन नयाँ</p>
-          <h2 className="text-4xl font-bold md:text-6xl">आजको दैनिक राशिफल</h2>
+          <p className="mb-3 font-semibold md:mb-4">
+            <span className="lang-ne">हरेक दिन नयाँ</span>
+            <span className="lang-en">Fresh Every Day</span>
+          </p>
+          <h2 className="text-4xl font-bold md:text-6xl">
+            <span className="lang-ne">आजको दैनिक राशिफल</span>
+            <span className="lang-en">Today&apos;s Daily Rashifal</span>
+          </h2>
           <p className="mt-3 md:mt-4">{dateLine}</p>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -48,22 +54,39 @@ export function DailyRashifal() {
               <p className="text-sm leading-relaxed text-neutral-700">{p.text}</p>
               <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-t border-border-primary pt-4 text-sm">
                 <span>
-                  <span className="font-semibold">भाग्याङ्क</span>{" "}
+                  <span className="font-semibold">
+                    <span className="lang-ne">भाग्याङ्क</span>
+                    <span className="lang-en">Lucky Number</span>
+                  </span>{" "}
                   {toDev(p.luckyNumber)}
                 </span>
                 <span>
-                  <span className="font-semibold">शुभरङ</span> {p.luckyColor}
+                  <span className="font-semibold">
+                    <span className="lang-ne">शुभरङ</span>
+                    <span className="lang-en">Lucky Color</span>
+                  </span>{" "}
+                  {p.luckyColor}
                 </span>
                 <span>
-                  <span className="font-semibold">शुभदिन</span> {p.luckyDay}
+                  <span className="font-semibold">
+                    <span className="lang-ne">शुभदिन</span>
+                    <span className="lang-en">Lucky Day</span>
+                  </span>{" "}
+                  {p.luckyDay}
                 </span>
               </div>
             </div>
           ))}
         </div>
         <p className="mt-10 text-center text-sm text-neutral-600">
-          यो राशिफल सामान्य ज्योतिषीय मार्गदर्शनका आधारमा तयार पारिएको हो र हरेक
-          दिन आफैँ अद्यावधिक हुन्छ।
+          <span className="lang-ne">
+            यो राशिफल सामान्य ज्योतिषीय मार्गदर्शनका आधारमा तयार पारिएको हो र हरेक
+            दिन आफैँ अद्यावधिक हुन्छ।
+          </span>
+          <span className="lang-en">
+            This rashifal is prepared based on general astrological guidance and
+            updates automatically every day.
+          </span>
         </p>
       </div>
     </section>

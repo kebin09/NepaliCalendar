@@ -78,34 +78,6 @@ const eventJsonLd = {
   },
 };
 
-const fiveDays = [
-  {
-    name: "दिन १ — काग तिहार (Kaag Tihar)",
-    detail:
-      "The first day honors the crow, messenger of Yama the god of death. Families place rice, grains and sweets on rooftops early in the morning so the cawing crow brings only good news in the year ahead.",
-  },
-  {
-    name: "दिन २ — कुकुर तिहार (Kukur Tihar)",
-    detail:
-      "Dogs wear marigold garlands, red tika and receive delicious meals. Known as Khicha Puja among Newars, it thanks dogs for loyalty and guards the path to the afterlife — even street dogs are fed this day.",
-  },
-  {
-    name: "दिन ३ — लक्ष्मी पूजा र गाई तिहार (Laxmi Puja & Gai Tihar)",
-    detail:
-      "Cows are worshipped as symbols of prosperity, then every doorway glows with oil lamps, candles and electric lights. Homes are scrubbed spotless and rangoli mandalas welcome goddess Laxmi, who visits only clean, lit houses at night.",
-  },
-  {
-    name: "दिन ४ — गोवर्धन पूजा, म्हः पूजा र गोरू तिहार (Govardhan Puja, Mha Puja & Goru Tihar)",
-    detail:
-      "Oxen are honored with garlands. Newar communities perform Mha Puja — worshipping one's own body and inner light on mandala diagrams — which also marks Nepal Sambat New Year. Vaishnavites build cow-dung Govardhan hills recalling Krishna lifting the mountain.",
-  },
-  {
-    name: "दिन ५ — भाइ टीका (Bhai Tika)",
-    detail:
-      "Sisters apply seven-color tika on brothers' foreheads, circle them with mustard oil and dubo grass, and offer makhamali (globe amaranth) flowers that never wilt — praying Yama spares their brothers until the flowers fade. Brothers give gifts and promise protection.",
-  },
-];
-
 export default function Page() {
   return (
     <div>
@@ -122,119 +94,90 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · कात्तिक शुक्ल त्रयोदशीदेखि · प्रकाश पर्व
+              <span className="lang-ne">
+                विक्रम संवत् २०८३ · कात्तिक शुक्ल त्रयोदशीदेखि · प्रकाश पर्व
+              </span>
+              <span className="lang-en">
+                Vikram Samvat 2083 · From Kartik Shukla Trayodashi · Festival of
+                Lights
+              </span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              तिहार — प्रकाश पर्व २०८३
+              <span className="lang-ne">तिहार — प्रकाश पर्व २०८३</span>
+              <span className="lang-en">Tihar — Festival of Lights 2083</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              तिहार, also called Deepawali or Yamapanchak, is Nepal&apos;s most
-              luminous celebration — five days each Kartik (October–November)
-              when oil lamps flicker on every windowsill, marigold garlands
-              drape shopfronts, and the night air carries drums and songs of
-              deusi-bhailo troupes. Unlike any other festival in the world,
-              Tihar consecrates not just gods but animals: crows, dogs, cows and
-              oxen all receive worship before sisters bless brothers on the
-              final day. It falls soon after{" "}
-              <a href="/festival/dashain/" className="underline">
-                Dashain
-              </a>
-              , and its exact tithis shift yearly — follow our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              for this year&apos;s dates.
+              <span className="lang-ne">
+                प्रकाश पर्व — ५ दिनको उत्सव। काग तिहार, कुकुर तिहार, लक्ष्मी
+                पूजा, गोवर्धन पूजा र भाइटीकाले भरिने तिहारमा देउसी-भैलोका गीत,
+                झुसिली र रंगोलीले घरघर उज्यालो हुन्छ। नेवार संस्कृतिको म्ह पूजा
+                र नेपाल सम्बत् नयाँ वर्ष पनि यही पर्वमा पर्छ।{" "}
+                <a href="/festival/dashain/" className="underline">
+                  दशैं
+                </a>{" "}
+                पछिको यो पर्व नेपालीको सबैभन्दा रौनकी उत्सव हो — तिथि हेर्न{" "}
+                <a href="/calendar/" className="underline">
+                  नेपाली पात्रो
+                </a>{" "}
+                अवलोकन गर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Festival of Lights — a 5-day celebration. Kaag Tihar, Kukur
+                Tihar, Laxmi Puja, Govardhan Puja and Bhai Tika fill every home
+                with oil lamps, marigold garlands and rangoli mandalas, while
+                deusi-bhailo singers roam the streets at night. The Newar Mha
+                Puja and Nepal Sambat New Year fall within these five days too.
+                Coming soon after{" "}
+                <a href="/festival/dashain/" className="underline">
+                  Dashain
+                </a>
+                , it is Nepal&apos;s most luminous celebration — follow our{" "}
+                <a href="/calendar/" className="underline">
+                  Nepali calendar
+                </a>{" "}
+                for this year&apos;s dates.
+              </span>
             </p>
           </div>
         </section>
 
         <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto">
-            <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-              The Five Days of Tihar
-            </h2>
-            <ul className="grid gap-6 md:grid-cols-2">
-              {fiveDays.map((d) => (
-                <li
-                  key={d.name}
-                  className="rounded-lg border border-border-primary p-6"
-                >
-                  <h3 className="mb-2 text-xl font-semibold">{d.name}</h3>
-                  <p>{d.detail}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:gap-x-20">
-            <div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Deusi-Bhailo Tradition
-              </h2>
-              <p className="mb-4">
-                After dusk on Laxmi Puja, girls singing <strong>bhailo</strong>{" "}
-                and boys singing <strong>deusi</strong> roam neighborhood to
-                neighborhood with drums, flutes and lanterns. They stop at every
-                lit house, perform verses praising the household and blessing
-                its prosperity, and receive sel roti, fruits, sweets and money
-                in return. The collected funds traditionally go toward social
-                causes — building a school bench, repairing a trail or funding a
-                community feast.
-              </p>
-              <p>
-                The songs themselves are folk poetry passed down generations,
-                mixing mythology with playful requests. In recent years,
-                diaspora communities have kept deusi alive over video calls,
-                proving the tradition travels wherever Nepalis go.
-              </p>
-            </div>
-            <div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Rangoli &amp; Lights
-              </h2>
-              <p className="mb-4">
-                Preparing for Laxmi Puja is an art form. Women grind rice into
-                white paste called <em>rupiya</em> and draw intricate rangoli
-                mandalas — lotus blooms, footprints of Laxmi, peacocks and
-                geometric yantras — on floors and doorsteps. Marigold garlands
-                woven overnight hang from eaves, and clay diyas burn mustard
-                oil through the night.
-              </p>
-              <p>
-                The belief is practical as much as devotional: darkness invites
-                misfortune, light invites wealth. Businesses close their ledgers
-                with Laxmi puja, opening new account books blessed for profit,
-                making Tihar simultaneously Nepal&apos;s spiritual and financial
-                new year of sorts.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Mha Puja &amp; Newar Culture
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+              <span className="lang-ne">इतिहास र महत्त्व: यमपञ्चक</span>
+              <span className="lang-en">
+                History &amp; Significance: Yamapanchak
+              </span>
             </h2>
             <p className="mb-4">
-              For the Newar community of the Kathmandu Valley, the fourth day
-              carries unique weight. <strong>Mha Puja</strong> — literally
-              &quot;worship of the self&quot; — honors the human body as a
-              temple. Family members sit before individual mandalas drawn with
-              powdered colors, and elders perform rituals with oil wicks,
-              flowers and sacred threads that purify body and spirit for the
-              year ahead. The same evening begins <strong>Nepal Sambat</strong>,
-              the indigenous lunar new year that predates the Bikram Sambat
-              calendar by centuries, celebrated with processions, masked dances
-              and the beloved steamed rice-flour dumpling yomari.
+              <span className="lang-ne">
+                तिहारलाई यमपञ्चक पनि भनिन्छ — मृत्युदेव यमराज र उनकी बहिनी
+                यमुनाको कथासँग यो पर्व जोडिन्छ। भाइटीकाका दिन दिदीबहिनीले सात
+                रङको टीका लगाई दुबो घुमाउँदै यमराजसँग दाजुभाइको लामो आयुको
+                कामना गर्छन्; मखमली फूल नओसिन्जेल भाइको रक्षा हुने विश्वास छ।
+              </span>
+              <span className="lang-en">
+                Tihar is also called Yamapanchak, tied to the legend of Yama,
+                the god of death, and his sister Yamuna. On Bhai Tika, sisters
+                apply seven-color tika on their brothers&apos; foreheads and
+                circle them with dubo grass, praying Yama grants them long life
+                — protected until the makhamali flowers they offer ever wilt.
+              </span>
             </p>
             <p>
-              This makes Tihar not merely a Hindu festival but a shared national
-              heritage where Hindu, Buddhist and animist traditions braid
-              together — Buddhist Newars perform Mha Puja with the same devotion
-              as Hindu families conduct Bhai Tika the next morning.
+              <span className="lang-ne">
+                यसै पर्वमा धनकी देवी लक्ष्मीको पूजा गरिन्छ। काग, कुकुर, गाई र
+                गोरूलाई सन्देशवाहक र समृद्धिका प्रतीक मानी पूजा गर्ने चलनले
+                तिहारलाई मानव, पशु र देवताबीचको सम्बन्धको उत्सव बनाउँछ —
+                संसारमा अरू कतै नहुने अनौठो परम्परा।
+              </span>
+              <span className="lang-en">
+                The festival also worships Laxmi, goddess of wealth. Honoring
+                crows as messengers, dogs as guardians, cows and oxen as symbols
+                of prosperity makes Tihar a celebration of the bond between
+                humans, animals and gods — a tradition found nowhere else in the
+                world.
+              </span>
             </p>
           </div>
         </section>
@@ -242,30 +185,42 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              How to Celebrate Tihar
+              <span className="lang-ne">तिहार कसरी मनाइन्छ?</span>
+              <span className="lang-en">How Tihar Is Celebrated</span>
             </h2>
             <p className="mb-4">
-              Start by cleaning and decorating your home days in advance — buy
-              sayapatri (marigold) and makhamali flowers fresh on the morning of
-              each puja. On Kukur Tihar, feed the dogs around your street; on
-              Laxmi Puja, light your doorway and join or host a deusi group. For
-              Bhai Tika, gather sapinda (seven-color powder), dubo grass, walnut
-              offerings and makhamali blossoms, then sit for the long ritual
-              where sisters narrate the legend of Yama and Yamuna while drawing
-              a protective boundary of mustard oil around their brothers.
+              <span className="lang-ne">
+                पहिलो दिन काग तिहारमा छतमा चामल र मीठा खाना राखिन्छ। दोस्रो दिन
+                कुकुर तिहारमा कुकुरहरूले सयपत्रीको माला, टीका र मीठो खाना
+                पाउँछन्। तेस्रो दिन गाई पूजापछि लक्ष्मी पूजामा ढोकाढोकामा दियो
+                बल्छ, झुसिली टाँसिन्छ र रंगोलीका मण्डल बनाइन्छ।
+              </span>
+              <span className="lang-en">
+                Day one, Kaag Tihar, offers rice and sweets to crows on
+                rooftops. Day two, Kukur Tihar, garlands dogs with marigolds,
+                tika and feasts. Day three honors cows before Laxmi Puja, when
+                doorways glow with oil lamps, paper lanterns and intricate
+                rangoli mandalas welcoming the goddess of wealth.
+              </span>
             </p>
             <p>
-              Visitors to Nepal during Tihar should walk through Ason,
-              Thamel or Patan Durbar Square after dark when the whole valley
-              glows. Check the{" "}
-              <a href="/calendar/" className="underline">
-                calendar
-              </a>{" "}
-              for public holidays, and continue exploring with our guides to{" "}
-              <a href="/festival/chhath/" className="underline">
-                Chhath Parva
-              </a>{" "}
-              and other great festivals that follow.
+              <span className="lang-ne">
+                चौथो दिन गोवर्धन पूजा र गोरू पूजा गरिन्छ भने नेवार समुदायको म्ह
+                पूजा — आफ्नै शरीर र भित्री ज्योतिको पूजा — ले नेपाल सम्बत् नयाँ
+                वर्ष सुरु गर्छ। पाँचौँ दिन भाइटीकामा दिदीबहिनीले भाइलाई
+                सातरङ्गे टीका लगाउँछन् र भाइले उपहार दिन्छन्। साँझपख
+                देउसी-भैलोका टोलीहरू ढोल-झ्यालीसहित घरघर गीत गाउँछन् र सेल
+                रोटी, फलफूल र दक्षिणा पाउँछन्।
+              </span>
+              <span className="lang-en">
+                Day four brings Govardhan Puja and ox worship, while the Newar
+                community performs Mha Puja — worshipping one&apos;s own body
+                and inner light on mandala diagrams — which begins Nepal Sambat
+                New Year. On day five, Bhai Tika, sisters apply seven-color tika
+                and brothers give gifts in return. Each evening, deusi-bhailo
+                troupes sing house to house with drums and flutes, receiving sel
+                roti, fruits and money for social causes.
+              </span>
             </p>
           </div>
         </section>
@@ -273,20 +228,75 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">घुम्न आउनेहरूका लागि सुझाव</span>
+              <span className="lang-en">Tips for Visitors</span>
+            </h2>
+            <p className="mb-4">
+              <span className="lang-ne">
+                तिहारमा साँझपख असन, ठमेल वा पाटन दरबार क्षेत्र हिँड्नुहोस् —
+                उज्यालोले सिङ्गो उपत्यका झिलमिल हुन्छ। सयपत्री र मखमली फूल हरेक
+                पूजाको बिहानै किन्नुहोस्। भाइटीकाका लागि सप्तरङ्गी टीका, दुबो,
+                ओखर र मखमली फूल तयार राख्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Walk through Ason, Thamel or Patan Durbar Square after dark when
+                the whole valley glows. Buy sayapatri (marigold) and makhamali
+                flowers fresh on the morning of each puja. For Bhai Tika, gather
+                seven-color powder, dubo grass, walnuts and makhamali blossoms
+                in advance.
+              </span>
+            </p>
+            <p>
+              <span className="lang-ne">
+                सार्वजनिक बिदा र तिथि{" "}
+                <a href="/calendar/" className="underline">
+                  पात्रो
+                </a>{" "}
+                बाट जाँच्नुहोस्, र त्यसपछि मनाइने{" "}
+                <a href="/festival/chhath/" className="underline">
+                  छठ पर्व
+                </a>{" "}
+                पनि हेर्नुहोस्। देउसी-भैलोको टोलीसँग सामेल हुन आग्रह गरिएमा
+                सहभागी हुनुहोस् — यो तिहारकै सबैभन्दा मीठो अनुभव हो।
+              </span>
+              <span className="lang-en">
+                Check public holidays and exact tithis on our{" "}
+                <a href="/calendar/" className="underline">
+                  calendar
+                </a>
+                , then continue exploring{" "}
+                <a href="/festival/chhath/" className="underline">
+                  Chhath Parva
+                </a>{" "}
+                which follows. If invited, join a deusi-bhailo troupe — it is
+                the sweetest experience Tihar offers.
+              </span>
+            </p>
+          </div>
+        </section>
+
+        <section className="px-[5%] py-16 md:py-24">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
+              <span className="lang-ne">सम्बन्धित पृष्ठहरू</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/festival/dashain/" className="underline">
-                Previous festival: Dashain
+                <span className="lang-ne">अघिल्लो पर्व: दशैं</span>
+                <span className="lang-en">Previous festival: Dashain</span>
               </a>
               <a href="/festival/chhath/" className="underline">
-                Next festival: Chhath
+                <span className="lang-ne">अर्को पर्व: छठ</span>
+                <span className="lang-en">Next festival: Chhath</span>
               </a>
               <a href="/month/kartik/" className="underline">
-                Month of Kartik
+                <span className="lang-ne">कात्तिक महिना</span>
+                <span className="lang-en">Month of Kartik</span>
               </a>
               <a href="/calendar/" className="underline">
-                Today&apos;s Tithi
+                <span className="lang-ne">आजको तिथि</span>
+                <span className="lang-en">Today&apos;s Tithi</span>
               </a>
             </div>
           </div>

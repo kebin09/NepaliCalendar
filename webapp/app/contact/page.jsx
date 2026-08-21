@@ -61,17 +61,31 @@ export default function Page() {
         <div className="container">
           <div className="mx-auto flex max-w-lg flex-col items-center text-center md:max-w-2xl">
             <h1 className="mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl">
-              सम्पर्क गर्नुहोस्
+              <span className="lang-ne">सम्पर्क गर्नुहोस्</span>
+              <span className="lang-en">Contact Us</span>
             </h1>
             <p className="mb-10 md:text-md">
-              तपाईंको प्रश्न, सुझाव वा समस्या साझा गर्नुहोस्। हामी तपाईंबाट
-              सुन्न हार्दिक रुचि राख्छौं र सामान्यतः २४–४८ घण्टाभित्र जवाफ
-              दिने प्रयास गर्छौं।
+              <span className="lang-ne">
+                तपाईंको प्रश्न, सुझाव वा समस्या साझा गर्नुहोस्। हामी तपाईंबाट
+                सुन्न हार्दिक रुचि राख्छौं र सामान्यतः २४–४८ घण्टाभित्र जवाफ
+                दिने प्रयास गर्छौं।
+              </span>
+              <span className="lang-en">
+                Share your questions, suggestions or problems with us. We
+                genuinely look forward to hearing from you and usually try to
+                respond within 24–48 hours.
+              </span>
             </p>
 
             <div className="flex w-full flex-col items-center rounded-lg border border-border-primary p-8 md:p-12">
-              <h2 className="mb-3 text-2xl font-bold">इमेल</h2>
-              <p className="mb-6 md:text-md">हामीलाई इमेल गर्नुहोस्</p>
+              <h2 className="mb-3 text-2xl font-bold">
+                <span className="lang-ne">इमेल</span>
+                <span className="lang-en">Email</span>
+              </h2>
+              <p className="mb-6 md:text-md">
+                <span className="lang-ne">हामीलाई इमेल गर्नुहोस्</span>
+                <span className="lang-en">Send us an email</span>
+              </p>
               <a
                 href="mailto:info@nepalicalendar.kebinmaharjan.com.np"
                 className="break-all text-md font-medium underline underline-offset-4"
@@ -81,7 +95,10 @@ export default function Page() {
             </div>
 
             <div className="mt-12 w-full">
-              <h2 className="mb-6 text-2xl font-bold">सामाजिक सञ्जाल</h2>
+              <h2 className="mb-6 text-2xl font-bold">
+                <span className="lang-ne">सामाजिक सञ्जाल</span>
+                <span className="lang-en">Social Media</span>
+              </h2>
               <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
                 {socialLinks.map((link) => (
                   <a

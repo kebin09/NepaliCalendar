@@ -11,6 +11,7 @@ import {
   FaRadio,
 } from "react-icons/fa6";
 import { RxChevronDown } from "react-icons/rx";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,34 +46,34 @@ const useRelume = () => {
 };
 
 const navLinks = [
-  { title: "पात्रो", href: "/calendar" },
-  { title: "ज्योतिष", href: "/rashifal" },
-  { title: "समाचार", href: "/news" },
+  { ne: "पात्रो", en: "Calendar", href: "/calendar" },
+  { ne: "ज्योतिष", en: "Horoscope", href: "/rashifal" },
+  { ne: "समाचार", en: "News", href: "/news" },
 ];
 
 const dropdownLinks = [
   {
-    title: "वित्त",
+    ne: { title: "वित्त", description: "सुन चाँदी र विदेशी मुद्राको ताजा दर" },
+    en: { title: "Finance", description: "Gold, silver & forex rates" },
     href: "/forex",
-    description: "सुन चाँदी र विदेशी मुद्राको ताजा दर",
     Icon: FaCoins,
   },
   {
-    title: "स्वास्थ्य",
+    ne: { title: "स्वास्थ्य", description: "औषधि र पानीको स्मार्ट रिमाइन्डर" },
+    en: { title: "Health", description: "Medicine & water smart reminders" },
     href: "/health",
-    description: "औषधि र पानीको स्मार्ट रिमाइन्डर",
     Icon: FaHeartPulse,
   },
   {
-    title: "मिडिया",
+    ne: { title: "मिडिया", description: "रेडियो, पोडकास्ट र भिडियोहरू" },
+    en: { title: "Media", description: "Radio, podcasts & videos" },
     href: "/radio",
-    description: "रेडियो, पोडकास्ट र भिडियोहरू",
     Icon: FaRadio,
   },
   {
-    title: "उपकरण",
+    ne: { title: "उपकरण", description: "मिति रूपान्तरण र गणकहरू" },
+    en: { title: "Tools", description: "Date converter & calculators" },
     href: "/converter",
-    description: "मिति रूपान्तरण र गणकहरू",
     Icon: FaCalculator,
   },
 ];
@@ -82,16 +83,53 @@ function Logo({ className }) {
     <Link
       href="/home"
       className="flex items-center gap-2"
-      aria-label="नेपाली पात्रो गृहपृष्ठ"
+      aria-label="Nepali Calendar Homepage"
     >
       <img
         src="/logo.svg"
-        alt="नेपाली पात्रो"
+        alt="Nepali Calendar"
         className={`inline-block ${className ?? ""}`}
       />
       <span className="whitespace-nowrap text-lg font-bold leading-none">
-        नेपाली पात्रो
+        <span className="lang-ne">नेपाली पात्रो</span>
+        <span className="lang-en">Nepali Calendar</span>
       </span>
+    </Link>
+  );
+}
+
+function NavLink({ link }) {
+  return (
+    <Link
+      href={link.href}
+      className="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base"
+    >
+      <span className="lang-ne">{link.ne}</span>
+      <span className="lang-en">{link.en}</span>
+    </Link>
+  );
+}
+
+function DropdownLink({ link }) {
+  const { ne, en, href, Icon } = link;
+  return (
+    <Link
+      href={href}
+      className="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
+    >
+      <div className="flex size-6 flex-col items-center justify-center">
+        <Icon className="size-6 shrink-0" />
+      </div>
+      <div className="flex flex-col items-start justify-center">
+        <h5 className="font-semibold">
+          <span className="lang-ne">{ne.title}</span>
+          <span className="lang-en">{en.title}</span>
+        </h5>
+        <p className="hidden text-sm md:block">
+          <span className="lang-ne">{ne.description}</span>
+          <span className="lang-en">{en.description}</span>
+        </p>
+      </div>
     </Link>
   );
 }
@@ -108,13 +146,7 @@ export function Navbar9() {
         <div className="absolute hidden h-screen overflow-auto border-b border-border-primary bg-background-primary px-[5%] pb-24 pt-4 md:pb-0 lg:static lg:ml-6 lg:flex lg:h-auto lg:flex-1 lg:items-center lg:justify-between lg:border-none lg:bg-none lg:px-0 lg:pt-0">
           <div className="flex flex-col items-center lg:flex-row">
             {navLinks.map((link) => (
-              <Link
-                key={link.title}
-                href={link.href}
-                className="relative block w-auto py-3 text-md lg:inline-block lg:px-4 lg:py-6 lg:text-base"
-              >
-                {link.title}
-              </Link>
+              <NavLink key={link.href} link={link} />
             ))}
             <div
               onMouseEnter={useActive.openOnDesktopDropdownMenu}
@@ -124,7 +156,10 @@ export function Navbar9() {
                 className="relative flex w-full items-center justify-between whitespace-nowrap py-3 text-md lg:w-auto lg:justify-start lg:gap-2 lg:px-4 lg:py-6 lg:text-base"
                 onClick={useActive.openOnMobileDropdownMenu}
               >
-                <span>थप</span>
+                <span>
+                  <span className="lang-ne">थप</span>
+                  <span className="lang-en">More</span>
+                </span>
                 <motion.span
                   animate={useActive.animateDropdownMenuIcon}
                   variants={{
@@ -159,22 +194,8 @@ export function Navbar9() {
                   <div className="mx-auto flex size-full max-w-full items-center justify-between">
                     <div className="flex w-full flex-col lg:flex-row">
                       <div className="grid flex-1 grid-cols-1 content-start items-start gap-x-8 gap-y-2 py-4 md:grid-cols-2 md:gap-y-6 md:py-8 lg:auto-cols-fr lg:grid-cols-4 lg:content-stretch lg:items-stretch lg:gap-y-0">
-                        {dropdownLinks.map(({ title, href, description, Icon }) => (
-                          <Link
-                            key={title}
-                            href={href}
-                            className="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
-                          >
-                            <div className="flex size-6 flex-col items-center justify-center">
-                              <Icon className="size-6 shrink-0" />
-                            </div>
-                            <div className="flex flex-col items-start justify-center">
-                              <h5 className="font-semibold">{title}</h5>
-                              <p className="hidden text-sm md:block">
-                                {description}
-                              </p>
-                            </div>
-                          </Link>
+                        {dropdownLinks.map((link) => (
+                          <DropdownLink key={link.href} link={link} />
                         ))}
                       </div>
                     </div>
@@ -182,9 +203,13 @@ export function Navbar9() {
                   <div className="relative mb-6 flex w-full flex-col items-start justify-between p-6 sm:items-center lg:mb-0 lg:flex-row lg:px-0 lg:py-3">
                     <div className="absolute -left-[50vw] -right-[50vw] bottom-0 top-0 w-[200vw] bg-background-secondary" />
                     <div className="relative z-10 mr-auto flex flex-col gap-y-4 sm:mx-auto sm:grid sm:auto-cols-fr sm:grid-cols-[max-content_max-content] sm:gap-x-1">
-                      <p>नयाँ सुविधाहरूको अनुभव लिन तयार हुनुहुन्छ</p>
+                      <p>
+                        <span className="lang-ne">नयाँ सुविधाहरूको अनुभव लिन तयार हुनुहुन्छ</span>
+                        <span className="lang-en">Ready to experience new features</span>
+                      </p>
                       <Link href="/gifts" className="underline">
-                        एप पाउनुहोस्
+                        <span className="lang-ne">एप पाउनुहोस्</span>
+                        <span className="lang-en">Get the app</span>
                       </Link>
                     </div>
                   </div>
@@ -192,57 +217,67 @@ export function Navbar9() {
               </AnimatePresence>
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            <LanguageToggle />
             <Button asChild variant="secondary" size="sm">
-              <Link href="/date-converter">मिति रूपान्तरण</Link>
+              <Link href="/date-converter">
+                <span className="lang-ne">मिति रूपान्तरण</span>
+                <span className="lang-en">Date Converter</span>
+              </Link>
             </Button>
             <Button asChild size="sm">
-              <Link href="/calendar">पात्रो हेर्नुहोस्</Link>
+              <Link href="/calendar">
+                <span className="lang-ne">पात्रो हेर्नुहोस्</span>
+                <span className="lang-en">View Calendar</span>
+              </Link>
             </Button>
           </div>
         </div>
-        <button
-          className="-mr-2 flex size-12 cursor-pointer flex-col items-center justify-center lg:hidden"
-          onClick={useActive.toggleMobileMenu}
-        >
-          <motion.span
-            className="my-[3px] h-0.5 w-6 bg-black"
-            animate={useActive.animateMobileMenuButtonSpan}
-            variants={{
-              open: { translateY: 8, transition: { delay: 0.1 } },
-              rotatePhase: { rotate: -45, transition: { delay: 0.2 } },
-              closed: {
-                translateY: 0,
-                rotate: 0,
-                transition: { duration: 0.2 },
-              },
-            }}
-          />
-          <motion.span
-            className="my-[3px] h-0.5 w-6 bg-black"
-            animate={useActive.animateMobileMenu}
-            variants={{
-              open: { width: 0, transition: { duration: 0.1 } },
-              closed: {
-                width: "1.5rem",
-                transition: { delay: 0.3, duration: 0.2 },
-              },
-            }}
-          />
-          <motion.span
-            className="my-[3px] h-0.5 w-6 bg-black"
-            animate={useActive.animateMobileMenuButtonSpan}
-            variants={{
-              open: { translateY: -8, transition: { delay: 0.1 } },
-              rotatePhase: { rotate: 45, transition: { delay: 0.2 } },
-              closed: {
-                translateY: 0,
-                rotate: 0,
-                transition: { duration: 0.2 },
-              },
-            }}
-          />
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageToggle />
+          <button
+            className="-mr-2 flex size-12 cursor-pointer flex-col items-center justify-center"
+            onClick={useActive.toggleMobileMenu}
+          >
+            <motion.span
+              className="my-[3px] h-0.5 w-6 bg-black"
+              animate={useActive.animateMobileMenuButtonSpan}
+              variants={{
+                open: { translateY: 8, transition: { delay: 0.1 } },
+                rotatePhase: { rotate: -45, transition: { delay: 0.2 } },
+                closed: {
+                  translateY: 0,
+                  rotate: 0,
+                  transition: { duration: 0.2 },
+                },
+              }}
+            />
+            <motion.span
+              className="my-[3px] h-0.5 w-6 bg-black"
+              animate={useActive.animateMobileMenu}
+              variants={{
+                open: { width: 0, transition: { duration: 0.1 } },
+                closed: {
+                  width: "1.5rem",
+                  transition: { delay: 0.3, duration: 0.2 },
+                },
+              }}
+            />
+            <motion.span
+              className="my-[3px] h-0.5 w-6 bg-black"
+              animate={useActive.animateMobileMenuButtonSpan}
+              variants={{
+                open: { translateY: -8, transition: { delay: 0.1 } },
+                rotatePhase: { rotate: 45, transition: { delay: 0.2 } },
+                closed: {
+                  translateY: 0,
+                  rotate: 0,
+                  transition: { duration: 0.2 },
+                },
+              }}
+            />
+          </button>
+        </div>
       </div>
       <AnimatePresence>
         <motion.div
@@ -263,8 +298,9 @@ export function Navbar9() {
           >
             <div className="flex flex-col">
               {navLinks.map((link) => (
-                <Link key={link.title} href={link.href} className="block py-3 text-md">
-                  {link.title}
+                <Link key={link.href} href={link.href} className="block py-3 text-md">
+                  <span className="lang-ne">{link.ne}</span>
+                  <span className="lang-en">{link.en}</span>
                 </Link>
               ))}
               <div>
@@ -272,7 +308,10 @@ export function Navbar9() {
                   className="relative flex w-full items-center justify-between whitespace-nowrap py-3 text-md lg:w-auto lg:justify-start lg:gap-2 lg:px-4 lg:py-6 lg:text-base"
                   onClick={useActive.openOnMobileDropdownMenu}
                 >
-                  <span>थप</span>
+                  <span>
+                    <span className="lang-ne">थप</span>
+                    <span className="lang-en">More</span>
+                  </span>
                   <motion.span
                     animate={useActive.animateDropdownMenuIcon}
                     variants={{
@@ -307,22 +346,8 @@ export function Navbar9() {
                     <div className="mx-auto flex size-full max-w-full items-center justify-between">
                       <div className="flex w-full flex-col lg:flex-row">
                         <div className="grid flex-1 grid-cols-1 content-start items-start gap-x-8 gap-y-2 py-4 md:grid-cols-2 md:gap-y-6 md:py-8 lg:auto-cols-fr lg:grid-cols-4 lg:content-stretch lg:items-stretch lg:gap-y-0">
-                          {dropdownLinks.map(({ title, href, description, Icon }) => (
-                            <Link
-                              key={title}
-                              href={href}
-                              className="grid w-full auto-cols-fr grid-cols-[max-content_1fr] items-start gap-x-3 py-2"
-                            >
-                              <div className="flex size-6 flex-col items-center justify-center">
-                                <Icon className="size-6 shrink-0" />
-                              </div>
-                              <div className="flex flex-col items-start justify-center">
-                                <h5 className="font-semibold">{title}</h5>
-                                <p className="hidden text-sm md:block">
-                                  {description}
-                                </p>
-                              </div>
-                            </Link>
+                          {dropdownLinks.map((link) => (
+                            <DropdownLink key={link.href} link={link} />
                           ))}
                         </div>
                       </div>
@@ -330,9 +355,13 @@ export function Navbar9() {
                     <div className="relative mb-6 flex w-full flex-col items-start justify-between p-6 sm:items-center lg:mb-0 lg:flex-row lg:px-0 lg:py-3">
                       <div className="absolute -left-[50vw] -right-[50vw] bottom-0 top-0 w-[200vw] bg-background-secondary" />
                       <div className="relative z-10 mr-auto flex flex-col gap-y-4 sm:mx-auto sm:grid sm:auto-cols-fr sm:grid-cols-[max-content_max-content] sm:gap-x-1">
-                        <p>नयाँ सुविधाहरूको अनुभव लिन तयार हुनुहुन्छ</p>
+                        <p>
+                          <span className="lang-ne">नयाँ सुविधाहरूको अनुभव लिन तयार हुनुहुन्छ</span>
+                          <span className="lang-en">Ready to experience new features</span>
+                        </p>
                         <Link href="/gifts" className="underline">
-                          एप पाउनुहोस्
+                          <span className="lang-ne">एप पाउनुहोस्</span>
+                          <span className="lang-en">Get the app</span>
                         </Link>
                       </div>
                     </div>
@@ -341,10 +370,16 @@ export function Navbar9() {
               </div>
               <div className="mt-6 flex flex-col gap-4">
                 <Button asChild variant="secondary" size="sm">
-                  <Link href="/date-converter">मिति रूपान्तरण</Link>
+                  <Link href="/date-converter">
+                    <span className="lang-ne">मिति रूपान्तरण</span>
+                    <span className="lang-en">Date Converter</span>
+                  </Link>
                 </Button>
                 <Button asChild size="sm">
-                  <Link href="/calendar">पात्रो हेर्नुहोस्</Link>
+                  <Link href="/calendar">
+                    <span className="lang-ne">पात्रो हेर्नुहोस्</span>
+                    <span className="lang-en">View Calendar</span>
+                  </Link>
                 </Button>
               </div>
             </div>

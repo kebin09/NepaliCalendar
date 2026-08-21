@@ -77,29 +77,6 @@ const eventJsonLd = {
   },
 };
 
-const fourDays = [
-  {
-    name: "दिन १ — नहाय खाय (Nahay Khay)",
-    detail:
-      "Vratis bathe in holy rivers or home-ritual water, carry Ganga jal home, and eat a single satvik meal of arwa chawal (boiled sun-dried rice), chana dal and lauki (bottle gourd) cooked on earthen chulhas. The house is scrubbed spotless from this day onward.",
-  },
-  {
-    name: "दिन २ — खरना (Kharna / Lohanda)",
-    detail:
-      "A full-day fast without even water ends after sunset with kheer — jaggery-sweetened rice pudding — plus roti made of single-grain flour, eaten alone by the vrati. This meal becomes their only nourishment for the next 36 hours.",
-  },
-  {
-    name: "दिन ३ — सन्ध्या अर्घ्य (Sandhya Arghya)",
-    detail:
-      "The most demanding day: complete nirjala fasting while families prepare thekua (jaggery-wheat cookies), sugarcane, coconut, banana and radish in bamboo soop baskets. At sunset, thousands stand waist-deep in rivers offering arghya to the setting Sun.",
-  },
-  {
-    name: "दिन ४ — उषा अर्घ्य (Usha Arghya / Parna)",
-    detail:
-      "Devotees return to the ghats before dawn to greet the rising Sun with milk, water and prayers, breaking their fast afterward with prasad. The vigil through the cold November night singing Chhath geet is considered the festival's spiritual peak.",
-  },
-];
-
 export default function Page() {
   return (
     <div>
@@ -116,24 +93,51 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · कात्तिक शुक्ल षष्ठी · सूर्योपासनाको महापर्व
+              <span className="lang-ne">
+                विक्रम संवत् २०८३ · कात्तिक शुक्ल षष्ठी · सूर्योपासनाको महापर्व
+              </span>
+              <span className="lang-en">
+                Vikram Samvat 2083 · Kartik Shukla Shashthi · The Great Festival
+                of Sun Worship
+              </span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              छठ पर्व — सूर्य पूजा २०८३
+              <span className="lang-ne">छठ पर्व — सूर्य पूजा २०८३</span>
+              <span className="lang-en">Chhath Parva — Sun Worship 2083</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              छठ Parva is perhaps the only major festival in the world where
-              devotees thank not a temple idol but the setting and rising Sun
-              themselves. Celebrated six days after{" "}
-              <a href="/festival/tihar/" className="underline">
-                Tihar&apos;s
-              </a>{" "}
-              Laxmi Puja on Kartik Shukla Shashthi, it transforms the riverbanks
-              of the Terai — the Bagmati at Janakpur, the Narayani at Birgunj,
-              the Koshi at Biratnagar — into oceans of saffron, bamboo baskets
-              and devotional song. Entire families keep brutal fasts, some
-              lasting over fifty hours without water, purely out of gratitude to
-              Surya, the source of all life and energy.
+              <span className="lang-ne">
+                सूर्य पूजा — ४ दिनको व्रत। नहाँय खाँय, खरना, सन्ध्या अर्घ्य र
+                उषा अर्घ्य — चारै दिन सूर्य भगवान्लाई अर्घ्य दिइन्छ। नदी र
+                पोखरीमा स्नान गर्दै व्रतालुहरूले असीम भक्ति देखाउँछन्। तराईमा
+                विशेष महत्त्व बोक्ने यो वैदिक पर्व जनकपुर, वीरगन्ज र
+                विराटनगरका घाटहरूमा भव्य रूपमा मनाइन्छ।{" "}
+                <a href="/festival/tihar/" className="underline">
+                  तिहार
+                </a>{" "}
+                पछि आउने यो पर्वका तिथि{" "}
+                <a href="/calendar/" className="underline">
+                  नेपाली पात्रो
+                </a>{" "}
+                मा हेर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Sun worship — a 4-day fasting festival. Nahay Khay, Kharna,
+                Sandhya Arghya and Usha Arghya — on each day, offerings are made
+                to the Sun god himself. Devotees bathe in rivers and ponds,
+                keeping fasts that can last over fifty hours without water.
+                Carrying special significance in the Terai, this Vedic festival
+                transforms the ghats of Janakpur, Birgunj and Biratnagar into
+                oceans of saffron and devotion. It follows{" "}
+                <a href="/festival/tihar/" className="underline">
+                  Tihar
+                </a>{" "}
+                — track its tithis on our{" "}
+                <a href="/calendar/" className="underline">
+                  Nepali calendar
+                </a>
+                .
+              </span>
             </p>
           </div>
         </section>
@@ -141,120 +145,45 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              Why Worship the Sun God?
+              <span className="lang-ne">इतिहास र महत्त्व: सूर्य उपासना</span>
+              <span className="lang-en">
+                History &amp; Significance: Worshipping the Sun God
+              </span>
             </h2>
             <p className="mb-4">
-              In Vedic tradition, Surya is the visible god — the one deity every
-              human sees daily, sustainer of crops, health and time itself.
-              Chhath honors Surya together with <strong>Chhathi Maiya</strong>,
-              his consort believed to be Usha or the goddess Shashthi, who
-              grants longevity, health and progeny to children. The Mahabharata
-              says Draupadi and the Pandavas performed Chhath to regain their
-              kingdom, while Ramayana traditions hold that Rama and Sita kept
-              this fast after returning to Ayodhya — fitting, since Janakpur,
-              Sita&apos;s birthplace in Nepal, remains the festival&apos;s
-              beating heart.
+              <span className="lang-ne">
+                वैदिक परम्परामा सूर्य दृश्य देवता हुन् — बाली, स्वास्थ्य र
+                समयका स्रोत। छठमा सूर्यसँगै छठी मइयाको पूजा गरिन्छ, जसले
+                सन्तानको लामो आयु, स्वास्थ्य र समृद्धि दिने विश्वास गरिन्छ।
+                डुबन्त र उदाउँदो सूर्यलाई सीधै अर्घ्य दिने यो पर्व कृतज्ञताको
+                महान् अभिव्यक्ति हो।
+              </span>
+              <span className="lang-en">
+                In Vedic tradition, Surya is the visible god — sustainer of
+                crops, health and time itself. Chhath honors the Sun together
+                with Chhathi Maiya, believed to grant children longevity, health
+                and prosperity. Offering arghya directly to the setting and
+                rising Sun is one of humanity&apos;s oldest expressions of
+                gratitude to the source of all energy.
+              </span>
             </p>
             <p>
-              Unlike other pujas, Chhath has no priests and no idols. The
-              vrati — usually women but increasingly men too — faces the Sun
-              directly, making it a rare democratic ritual where devotion, not
-              donation, is the only currency.
-            </p>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto">
-            <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-              The Four Days of Chhath
-            </h2>
-            <ul className="grid gap-6 md:grid-cols-2">
-              {fourDays.map((d) => (
-                <li
-                  key={d.name}
-                  className="rounded-lg border border-border-primary p-6"
-                >
-                  <h3 className="mb-2 text-xl font-semibold">{d.name}</h3>
-                  <p>{d.detail}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:gap-x-20">
-            <div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Arwa-Chawal &amp; Sacred Offerings
-              </h2>
-              <p className="mb-4">
-                Every offering in Chhath follows strict purity rules. Rice must
-                be <strong>arwa</strong> — sun-dried without boiling — ground
-                fresh by hand, cooked on cow-dung-fueled clay stoves by the
-                vrati herself. The signature sweet is <em>thekua</em>, wheat
-                flour kneaded with jaggery and ghee, deep-fried into durable
-                cookies that survive the long night vigils. Bamboo soop
-                baskets, sugarcane stalks tied like flags, whole coconuts with
-                water intact, and seasonal fruits fill the offering trays.
-              </p>
-              <p>
-                Nothing tastes of onion, garlic or salt; even the water for
-                cooking is fetched from the same river where arghya will be
-                offered. This culinary discipline turns the household kitchen
-                into a temporary temple.
-              </p>
-            </div>
-            <div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Rivers, Health &amp; Vitamin D
-              </h2>
-              <p className="mb-4">
-                Standing in cold river water at dawn and dusk exposes the body
-                gently to sunlight when ultraviolet rays are safest, letting
-                skin synthesize natural vitamin D — a fact grandmothers knew
-                long before nutritionists. Devotees believe the practice also
-                detoxifies body and mind: the 36-hour nirjala fast is said to
-                let the digestive system rest completely, while standing in
-                water channels energy downward, calming the nervous system much
-                like grounding practices described today.
-              </p>
-              <p>
-                Scientifically or spiritually, the results speak: Chhath
-                observers report deep calm, discipline and family bonding that
-                few modern retreats can match.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Cultural Heart of the Terai
-            </h2>
-            <p className="mb-4">
-              Though rooted in the Madheshi and Maithil culture of Nepal&apos;s
-              southern plains, Chhath now belongs to all Nepalis. Janakpur&apos;s
-              Dhanush Sagar and Ganga Sagar ponds draw hundreds of thousands,
-              with government holidays declared and roads closed for processions
-              of glowing lamps. Migrants have carried the festival to Kathmandu&apos;s
-              Bagmati ghats at Thapathali and Shankhamul, where the capital&apos;s
-              Terai community recreates home each Kartik.
-            </p>
-            <p>
-              Folk songs called <em>Chhath geet</em> — sung in Maithili, Bhojpuri
-              and Hindi — narrate legends of Chhathi Maiya blessing childless
-              couples, and the night before Sandhya Arghya echoes with them till
-              sunrise. If you wish to witness it, arrive at any major ghat by
-              late afternoon on day three; dress modestly, ask before
-              photographing vratis, and accept prasad respectfully when offered.
-              Confirm exact tithis on our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              and explore more festivals across the year.
+              <span className="lang-ne">
+                महाभारतमा द्रौपदी र पाण्डवहरूले राज्य पुनःप्राप्तिका लागि छठ
+                गरेको र रामायण परम्पराअनुसार राम-सीताले अयोध्या फर्केपछि यो
+                व्रत बसेको उल्लेख छ। सीताको जन्मभूमि जनकपुर आज पनि यो पर्वको
+                केन्द्र हो। पूजारी बिना, मूर्ति बिना — सीधा सूर्यतर्फ फर्केर
+                गरिने यो पूजा अनौठो लोकतान्त्रिक अनुष्ठान हो।
+              </span>
+              <span className="lang-en">
+                The Mahabharata says Draupadi and the Pandavas performed Chhath
+                to regain their kingdom, while Ramayana tradition holds that
+                Rama and Sita kept this fast after returning to Ayodhya —
+                fitting, since Janakpur, Sita&apos;s birthplace in Nepal, remains
+                the festival&apos;s beating heart. With no priests and no idols,
+                devotees face the Sun directly in a rare democratic ritual where
+                devotion alone matters.
+              </span>
             </p>
           </div>
         </section>
@@ -262,20 +191,110 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">छठ कसरी मनाइन्छ?</span>
+              <span className="lang-en">How Chhath Is Celebrated</span>
+            </h2>
+            <p className="mb-4">
+              <span className="lang-ne">
+                पहिलो दिन नहाँय खाँयमा व्रतालुहरूले नदीमा स्नान गरी अरवा-चामल,
+                चना दाल र लौकाको शुद्ध भोजन गर्छन्; घर नुहाइधुवाइले चम्किन्छ।
+                दोस्रो दिन खरनामा दिनभरि निर्जला व्रत बसी साँझपख गुडको खीर
+                खाइन्छ — यही भोजन अर्को ३६ घण्टाको एक मात्र आहार हुन्छ।
+              </span>
+              <span className="lang-en">
+                On day one, Nahay Khay, devotees bathe in holy rivers and eat a
+                single satvik meal of arwa-chawal (sun-dried rice), chana dal
+                and bottle gourd; homes are scrubbed spotless. Day two, Kharna,
+                ends a full-day waterless fast after sunset with jaggery kheer —
+                the vrati&apos;s only nourishment for the next 36 hours.
+              </span>
+            </p>
+            <p>
+              <span className="lang-ne">
+                तेस्रो दिन सन्ध्या अर्घ्यमा ठेकुवा, खर, नरिवल, केरा र मूलाको
+                सूप भरेर हजारौं व्रतालु नदीमा उभिएर डुबन्त सूर्यलाई अर्घ्य
+                दिन्छन्। चौथो दिन उषा अर्घ्यमा बिहानै उदाउँदो सूर्यलाई दूध र जल
+                अर्पण गरी व्रत समापन हुन्छ। रातभर मैथिली, भोजपुरी र हिन्दीमा
+                छठ गीत गाएर जागरण गरिन्छ।
+              </span>
+              <span className="lang-en">
+                Day three, Sandhya Arghya, sees thousands stand waist-deep in
+                rivers at sunset offering thekua cookies, sugarcane, coconuts,
+                bananas and radish arranged in bamboo soop baskets to the
+                setting Sun. On day four, Usha Arghya, devotees return before
+                dawn to greet the rising Sun with milk and water, then break
+                their fast. Through the cold night, Chhath geet sung in Maithili,
+                Bhojpuri and Hindi keep the ghats awake.
+              </span>
+            </p>
+          </div>
+        </section>
+
+        <section className="px-[5%] py-16 md:py-24">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
+              <span className="lang-ne">घुम्न आउनेहरूका लागि सुझाव</span>
+              <span className="lang-en">Tips for Visitors</span>
+            </h2>
+            <p className="mb-4">
+              <span className="lang-ne">
+                तेस्रो दिनको साँझ जुनसुकै ठूलो घाटमा पुग्नुहोस् — जनकपुरका
+                धनुषसागर र गंगासागर, काठमाडौंका थापाथली र शंखमुल प्रमुख स्थल
+                हुन्। शालीन लुगा लगाउनुहोस्, व्रतालुको फोटो खिच्नुअघि अनुमति
+                लिनुहोस् र प्रसाद भक्तिपूर्वक ग्रहण गर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Arrive at any major ghat by late afternoon on day three —
+                Dhanush Sagar and Ganga Sagar in Janakpur, or Thapathali and
+                Shankhamul in Kathmandu are the main sites. Dress modestly, ask
+                before photographing fasting devotees, and accept prasad
+                respectfully when offered.
+              </span>
+            </p>
+            <p>
+              <span className="lang-ne">
+                सरकारी बिदा हुने भएकाले यातायात अग्रिम योजना बनाउनुहोस्। घाटमा
+                भीड हुने भएकाले आफ्ना सामानको ख्याल राख्नुहोस्। तिथि पुष्टि गर्न{" "}
+                <a href="/calendar/" className="underline">
+                  पात्रो
+                </a>{" "}
+                हेर्नुहोस् र तराईको यो अद्भुत पर्व आफ्नै आँखाले अवलोकन गर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Government holidays are declared, so plan transport ahead and
+                mind your belongings in the crowds. Confirm exact tithis on our{" "}
+                <a href="/calendar/" className="underline">
+                  calendar
+                </a>{" "}
+                and witness this extraordinary Terai festival with your own
+                eyes.
+              </span>
+            </p>
+          </div>
+        </section>
+
+        <section className="px-[5%] py-16 md:py-24">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
+              <span className="lang-ne">सम्बन्धित पृष्ठहरू</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/festival/tihar/" className="underline">
-                Previous festival: Tihar
+                <span className="lang-ne">अघिल्लो पर्व: तिहार</span>
+                <span className="lang-en">Previous festival: Tihar</span>
               </a>
               <a href="/festival/shivaratri/" className="underline">
-                Next festival: Maha Shivaratri
+                <span className="lang-ne">अर्को पर्व: महाशिवरात्रि</span>
+                <span className="lang-en">Next festival: Maha Shivaratri</span>
               </a>
               <a href="/month/kartik/" className="underline">
-                Month of Kartik
+                <span className="lang-ne">कात्तिक महिना</span>
+                <span className="lang-en">Month of Kartik</span>
               </a>
               <a href="/calendar/" className="underline">
-                Today&apos;s Tithi
+                <span className="lang-ne">आजको तिथि</span>
+                <span className="lang-en">Today&apos;s Tithi</span>
               </a>
             </div>
           </div>

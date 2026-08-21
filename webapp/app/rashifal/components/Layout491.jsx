@@ -80,17 +80,32 @@ export function Layout491() {
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4">योजना</p>
+          <p className="mb-3 font-semibold md:mb-4">
+            <span className="lang-ne">योजना</span>
+            <span className="lang-en">Planning</span>
+          </p>
           <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            आजको राशिफल पढेर दिनको योजना बनाउनुहोस्
+            <span className="lang-ne">
+              आजको राशिफल पढेर दिनको योजना बनाउनुहोस्
+            </span>
+            <span className="lang-en">
+              Plan Your Day by Reading Today&apos;s Rashifal
+            </span>
           </h2>
           <p className="md:text-md">
-            ताराहरूले आजको दिन कस्तो संकेत गरिरहेका छन्, त्यो बुझ्नुहोस्। आफ्नो
-            राशिफल पढेर हरेक कदम सोचविचार गरी चाल्नुहोस्।
+            <span className="lang-ne">
+              ताराहरूले आजको दिन कस्तो संकेत गरिरहेका छन्, त्यो बुझ्नुहोस्। आफ्नो
+              राशिफल पढेर हरेक कदम सोचविचार गरी चाल्नुहोस्।
+            </span>
+            <span className="lang-en">
+              Understand what the stars indicate about your day today. Read your
+              rashifal and take every step thoughtfully.
+            </span>
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
             <Button title="राशिफल" variant="secondary">
-              राशिफल
+              <span className="lang-ne">राशिफल</span>
+              <span className="lang-en">Rashifal</span>
             </Button>
             <Button
               title="राशि"
@@ -98,7 +113,8 @@ export function Layout491() {
               size="link"
               iconRight={<RxChevronRight />}
             >
-              राशि
+              <span className="lang-ne">राशि</span>
+              <span className="lang-en">Zodiac Signs</span>
             </Button>
           </div>
         </div>
@@ -109,7 +125,8 @@ export function Layout491() {
               className={useActive.getActiveTabButtonStyles(0)}
             >
               <h2 className="text-2xl font-bold md:text-3xl md:leading-[1.3] lg:text-4xl">
-                दैनिक राशिफल
+                <span className="lang-ne">दैनिक राशिफल</span>
+                <span className="lang-en">Daily Rashifal</span>
               </h2>
               <motion.div
                 initial={false}
@@ -118,7 +135,12 @@ export function Layout491() {
                 className="overflow-hidden"
               >
                 <p className="mt-3 md:mt-4">
-                  हरेक दिन आफ्नो राशिअनुसारको भविष्यवाणी पढ्नुहोस्।
+                  <span className="lang-ne">
+                    हरेक दिन आफ्नो राशिअनुसारको भविष्यवाणी पढ्नुहोस्।
+                  </span>
+                  <span className="lang-en">
+                    Read your zodiac prediction every day.
+                  </span>
                 </p>
               </motion.div>
             </div>
@@ -127,7 +149,8 @@ export function Layout491() {
               className={useActive.getActiveTabButtonStyles(1)}
             >
               <h2 className="text-2xl font-bold md:text-3xl md:leading-[1.3] lg:text-4xl">
-                साप्ताहिक राशिफल
+                <span className="lang-ne">साप्ताहिक राशिफल</span>
+                <span className="lang-en">Weekly Rashifal</span>
               </h2>
               <motion.div
                 initial={false}
@@ -136,7 +159,12 @@ export function Layout491() {
                 className="overflow-hidden"
               >
                 <p className="mt-3 md:mt-4">
-                  ग्रहगोचरका आधारमा हप्ताको विस्तृत मार्गदर्शन।
+                  <span className="lang-ne">
+                    ग्रहगोचरका आधारमा हप्ताको विस्तृत मार्गदर्शन।
+                  </span>
+                  <span className="lang-en">
+                    Detailed weekly guidance based on planetary movements.
+                  </span>
                 </p>
               </motion.div>
             </div>
@@ -145,7 +173,8 @@ export function Layout491() {
               className={useActive.getActiveTabButtonStyles(2)}
             >
               <h2 className="text-2xl font-bold md:text-3xl md:leading-[1.3] lg:text-4xl">
-                वार्षिक राशिफल
+                <span className="lang-ne">वार्षिक राशिफल</span>
+                <span className="lang-en">Annual Rashifal</span>
               </h2>
               <motion.div
                 initial={false}
@@ -154,7 +183,12 @@ export function Layout491() {
                 className="overflow-hidden"
               >
                 <p className="mt-3 md:mt-4">
-                  आफ्नो वर्षभरिको योजना बनाउन विस्तृत वार्षिक राशिफल।
+                  <span className="lang-ne">
+                    आफ्नो वर्षभरिको योजना बनाउन विस्तृत वार्षिक राशिफल।
+                  </span>
+                  <span className="lang-en">
+                    Detailed annual rashifal to plan your whole year.
+                  </span>
                 </p>
               </motion.div>
             </div>

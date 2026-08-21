@@ -76,29 +76,6 @@ const eventJsonLd = {
   },
 };
 
-const colors = [
-  {
-    name: "रातो (Red)",
-    meaning:
-      "Love, fertility and marriage — the color of sindoor and brides, thrown most generously on friends and sweethearts.",
-  },
-  {
-    name: "पहेँलो (Yellow)",
-    meaning:
-      "Turmeric's sacred hue of spring harvest, health and auspicious beginnings; also the color of Vishnu and knowledge.",
-  },
-  {
-    name: "हरियो (Green)",
-    meaning:
-      "New life and nature's rebirth after winter, echoing the fresh mustard fields of the Terai in Falgun.",
-  },
-  {
-    name: "निलो (Blue)",
-    meaning:
-      "The skin of Krishna and Shiva — divinity, calm and the boundless sky that Holi's spring skies mirror.",
-  },
-];
-
 export default function Page() {
   return (
     <div>
@@ -115,25 +92,40 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · फागुन पूर्णिमा · रङ र खुशीको महोत्सव
+              <span className="lang-ne">
+                विक्रम संवत् २०८३ · फागु पूर्णिमा · रङ र खुशीको महोत्सव
+              </span>
+              <span className="lang-en">
+                Vikram Samvat 2083 · Fagu Purnima · Festival of Colors and Joy
+              </span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              होली — रंगहरूको पर्व २०८३
+              <span className="lang-ne">होली — रंगहरूको पर्व २०८३</span>
+              <span className="lang-en">Holi — Festival of Colors 2083</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              होली, known in Nepal as <strong>Fagu Purnima</strong>, is the day
-              when social rules dissolve into clouds of pink, yellow and green.
-              Streets fill with drumbeats, water balloons arc from rooftops, and
-              strangers smear abir on each other&apos;s cheeks with a cheerful{" "}
-              <em>&quot;Happy Holi!&quot;</em> Falling on the full moon of
-              Falgun (February–March), it celebrates the arrival of spring, the
-              triumph of devotion over evil, and — for one day — perfect
-              equality, since no one can tell rich from poor under a coat of
-              color. Check this year&apos;s exact date on our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              before planning your celebration.
+              <span className="lang-ne">
+                रंगहरूको पर्व — दुई दिन मनाइन्छ। तराईमा फागु पूर्णिमाकै दिन
+                होलिका दहन गरी भोलिपल्ट पहाड र काठमाडौंमा रंग खेलिन्छ। प्रह्लाद
+                र होलिकाको कथासँग जोडिएको यो पर्वमा पिचकारी, ठण्डाई र अबिरका
+                रङले सबै जात-प्राय भुलेर एक हुन्छन्। यस वर्षको मिति{" "}
+                <a href="/calendar/" className="underline">
+                  नेपाली पात्रो
+                </a>{" "}
+                मा हेर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Festival of Colors — celebrated over two days. The Terai lights
+                Holika Dahan bonfires on Fagu Purnima itself, while the hills
+                and Kathmandu play with colors the next day. Tied to the story
+                of Prahlad and Holika, the day dissolves all social boundaries
+                into clouds of abir powder, pichkari water fights, drumbeats and
+                glasses of chilled thandai. Check this year&apos;s date on our{" "}
+                <a href="/calendar/" className="underline">
+                  Nepali calendar
+                </a>
+                .
+              </span>
             </p>
           </div>
         </section>
@@ -141,23 +133,43 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              The Legend of Prahlad &amp; Holika
+              <span className="lang-ne">इतिहास र महत्त्व: प्रह्लाद र होलिका</span>
+              <span className="lang-en">
+                History &amp; Significance: Prahlad and Holika
+              </span>
             </h2>
             <p className="mb-4">
-              Holi&apos;s roots lie in the story of Prahlad, the young prince
-              whose father, the demon king Hiranyakashipu, demanded worship as a
-              god. Prahlad refused, remaining devoted to Lord Vishnu. Furious,
-              the king asked his sister Holika — immune to fire by boon — to sit
-              on a pyre with Prahlad in her lap. As flames rose, the boon
-              reversed its logic: Holika burned while Prahlad emerged unharmed,
-              shielded by pure devotion. The next morning, Holika Dahan bonfires
-              are lit across Nepal to burn away arrogance and evil, just as
-              they consumed her.
+              <span className="lang-ne">
+                होलीको जरा प्रह्लादको कथामा छ। राक्षसराज हिरण्यकशिपुले आफूलाई
+                देवता मान्न आदेश दिँदा छोरा प्रह्लादले भगवान् विष्णुमै भक्ति
+                राखे। क्रोधित राजाले आगोले नडस्ने वरदान पाएकी आफ्नी बहिनी
+                होलिकालाई प्रह्लादलाई अँगालो हाली चितामा बस्न लगाए। आगो बल्दा
+                वरदान उल्टियो — होलिका डसिन् तर प्रह्लाद अक्षत रहे। त्यसैले
+                होलिका दहनको रात अहंकार र असत्य डस्ने प्रतीकका रूपमा मनाइन्छ।
+              </span>
+              <span className="lang-en">
+                Holi&apos;s roots lie in the story of Prahlad. When the demon
+                king Hiranyakashipu demanded worship as a god, his son Prahlad
+                stayed devoted to Lord Vishnu. Furious, the king made his sister
+                Holika — immune to fire by boon — sit on a pyre with Prahlad in
+                her lap. As flames rose, the boon reversed: Holika burned while
+                Prahlad emerged unharmed. That is why Holika Dahan bonfires burn
+                arrogance and evil the night before Holi.
+              </span>
             </p>
             <p>
-              A second thread ties Holi to Krishna, who playfully drenched
-              Radha and the gopis of Barsana with colored water — origin of the
-              romantic, mischievous spirit that still defines the day.
+              <span className="lang-ne">
+                अर्को धार कृष्णसँग जोडिन्छ — उहाँले राधा र गोपिनीहरूमाथि
+                रङ्गीन पानी छर्कँदा नै आजको रमाइलो र मिलनसार होलीको सुरुवात
+                भएको मानिन्छ। भक्तिको विजय र वसन्त ऋतुको आगमन — दुवैको सम्झनामा
+                रङ खेलिन्छ।
+              </span>
+              <span className="lang-en">
+                A second thread ties Holi to Krishna, who playfully drenched
+                Radha and the gopis with colored water — origin of today&apos;s
+                mischievous, joyful spirit. The colors celebrate both the
+                victory of devotion over evil and the arrival of spring.
+              </span>
             </p>
           </div>
         </section>
@@ -165,123 +177,86 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Two Days, Two Nepals: Terai &amp; Hill Holi
+              <span className="lang-ne">होली कसरी मनाइन्छ?</span>
+              <span className="lang-en">How Holi Is Celebrated</span>
             </h2>
             <p className="mb-4">
-              Uniquely, Nepal celebrates Holi on two consecutive days. The{" "}
-              <strong>Terai plains</strong> observe Holika Dahan and play Holi
-              on the full moon day itself, matching North Indian tradition.
-              The <strong>hill districts and Kathmandu Valley</strong> celebrate
-              one day later, following their own lunar reckoning. So while
-              Janakpur and Birgunj wash off their colors, Kathmandu is just
-              opening its bags of abir — a scheduling quirk that lets devoted
-              partygoers celebrate twice.
+              <span className="lang-ne">
+                नेपालमा होली दुई दिन मनाइन्छ — तराईका जनकपुर, वीरगन्जमा
+                पूर्णिमाकै दिन होलिका दहन र होली, भने पहाडी जिल्ला र काठमाडौं
+                उपत्यकामा भोलिपल्ट। दिनहरू अगाडि नै बसन्तपुरमा चीर खाम्बा
+                उभ्याइन्छ र होलीका दिन साँझ त्यसलाई तानेर दहन गरी पर्व
+                समापन हुन्छ।
+              </span>
+              <span className="lang-en">
+                Nepal celebrates Holi on two consecutive days — Terai cities
+                like Janakpur and Birgunj observe Holika Dahan and play on the
+                full moon itself, while hill districts and Kathmandu Valley
+                celebrate one day later. Days earlier, the chir pole is erected
+                at Basantapur; on Holi afternoon it is dragged through the
+                streets and burned, formally closing the festival.
+              </span>
             </p>
             <p>
-              The festivities open days earlier when the <strong>chir
-              pole</strong> — a bamboo mast wrapped in strips of cloth called
-              chirmudra — is erected at Basantapur Durbar Square and Thamel.
-              Legend says the cloth strips ward off the pole&apos;s bad omen;
-              on Holi afternoon the pole is dragged through the streets and
-              burned at the Tundikhel edge, formally closing the festival.
+              <span className="lang-ne">
+                बिहानै पिचकारी, पानीका बलुन र अबिर-गुलालको खेल सुरु हुन्छ।
+                बासन्तपुर र पोखरा लेकसाइडमा डिजे र नाचको भीड लाग्छ। घरघरमा
+                बादाम, सुपारी र गुलाबजल मिसाइएको चिसो ठण्डाई पकाइन्छ; गुजिया र
+                सेल रोटी पनि बन्छन्। रातो माया, पहेँलो ज्ञान, हरियो नयाँ जीवन
+                र निलो दिव्यताको प्रतीक मानिन्छ।
+              </span>
+              <span className="lang-en">
+                Morning brings pichkari water guns, rooftop water balloons and
+                clouds of abir and gulal powders. Basantapur and Pokhara
+                Lakeside fill with DJs and dancing crowds. At home, families
+                brew chilled thandai — milk blended with almonds, fennel and
+                rose petals — alongside gujiya and sel roti. Red symbolizes
+                love, yellow knowledge, green new life and blue divinity.
+              </span>
             </p>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:gap-x-20">
-            <div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Pichkari, Balloons &amp; Music
-              </h2>
-              <p className="mb-4">
-                Weeks before Holi, toy shops overflow with{" "}
-                <strong>pichkaris</strong> — water guns ranging from palm-sized
-                pistols to backpack pressure tanks — alongside buckets of water
-                balloons. Children ambush passersby from balconies, while
-                teenagers patrol neighborhoods on motorcycles trailing drums
-                and speakers. In Basantapur and Lakeside Pokhara, DJs spin
-                remixes of Holi classics as crowds dance in waves of dry color.
-              </p>
-              <p>
-                Traditionalists prefer <em>abir</em> and <em>lola</em>, natural
-                gulal powders smeared with a gentle touch and the greeting{" "}
-                <em>&quot;Lal salamat!&quot;</em> Elders receive tika of color
-                rather than a splash, keeping respect intact within the revelry.
-              </p>
-            </div>
-            <div>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Thandai &amp; Festive Foods
-              </h2>
-              <p className="mb-4">
-                No Holi table is complete without <strong>thandai</strong> — a
-                chilled milk blend of almonds, fennel, rose petals, cardamom,
-                pepper and melon seeds, traditionally served in clay cups to
-                cool bodies heated by sun and celebration. Kitchens also turn
-                out gujiya (sweet dumplings), malpuas, pakoras and large pots of
-                sel roti shared with neighbors.
-              </p>
-              <p>
-                In the Tarai, families gather for the post-Dahan feast where
-                seasonal treats like bhang thandai appear under strict adult
-                supervision — a reminder that Holi&apos;s indulgence has always
-                carried cultural guardrails.
-              </p>
-            </div>
           </div>
         </section>
 
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Meaning of Colors
-            </h2>
-            <ul className="mb-8 grid gap-6 md:grid-cols-2">
-              {colors.map((c) => (
-                <li
-                  key={c.name}
-                  className="rounded-lg border border-border-primary p-6"
-                >
-                  <h3 className="mb-2 text-lg font-semibold">{c.name}</h3>
-                  <p>{c.meaning}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        <section className="px-[5%] py-16 md:py-24">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Nepal vs India &amp; Safety Tips
+              <span className="lang-ne">घुम्न आउनेहरूका लागि सुझाव</span>
+              <span className="lang-en">Tips for Visitors</span>
             </h2>
             <p className="mb-4">
-              While both countries share the Prahlad legend, Nepal&apos;s Holi
-              feels distinctly its own: the two-day split between Terai and
-              hills, the royal-era chir ceremony at Basantapur, and a gentler
-              street culture where elders join briefly before retreating to
-              family feasts. Indian celebrations like Barsana&apos;s Lathmar
-              Holi have no direct Nepali equivalent, though Kathmandu&apos;s
-              modern street parties now rival Delhi&apos;s in energy.
-            </p>
-            <p className="mb-4">
-              Celebrate safely: wear old clothes and oil your hair so color
-              washes off easily; choose organic gulal over chemical dyes that
-              irritate skin and eyes; never throw balloons at motorbikes or
-              moving vehicles; respect anyone who says no — Holi consent
-              matters; keep water clean and avoid ice from unknown sources; and
-              look after pets, who find loud crowds stressful. Tourists should
-              secure phones in ziplock bags and celebrate in groups around
-              Basantapur, Thamel or Pokhara Lakeside.
+              <span className="lang-ne">
+                पुरानो लुगा लगाउनुहोस्, कपालमा तेल लगाउनुहोस् — रङ निस्कन
+                सजिलो हुन्छ। रासायनिक रङको सट्टा प्राकृतिक गुलाल रोज्नुहोस्।
+                चल्तीको मोटरसाइकल र गाडीतर्फ बलुन नहानुहोस्; &quot;होइन&quot;
+                भन्नेलाई सम्मान गर्नुहोस् — होलीमा पनि सहमति महत्त्वपूर्ण छ।
+              </span>
+              <span className="lang-en">
+                Wear old clothes and oil your hair so color washes off easily.
+                Choose natural gulal over chemical dyes that irritate skin.
+                Never throw balloons at moving vehicles, and respect anyone who
+                says no — consent matters even on Holi.
+              </span>
             </p>
             <p>
-              After the colors fade, the calendar marches on — explore what
-              comes next via our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              and month guides.
+              <span className="lang-ne">
+                पर्यटकहरू बसन्तपुर, ठमेल वा पोखरा लेकसाइडमा समूहमा रमाउनुहोस् र
+                फोन सुरक्षित राख्नुहोस्। मिति पुष्टि गर्न{" "}
+                <a href="/calendar/" className="underline">
+                  पात्रो
+                </a>{" "}
+                हेर्नुहोस् — तराई र पहाडको एक-एक दिन छुट्टाछुट्टै अनुभव लिन
+                सकिन्छ।
+              </span>
+              <span className="lang-en">
+                Tourists should celebrate in groups around Basantapur, Thamel or
+                Pokhara Lakeside and keep phones in ziplock bags. Confirm dates
+                on our{" "}
+                <a href="/calendar/" className="underline">
+                  calendar
+                </a>{" "}
+                — devoted partygoers can even enjoy both the Terai and hill
+                celebrations on consecutive days.
+              </span>
             </p>
           </div>
         </section>
@@ -289,20 +264,25 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">सम्बन्धित पृष्ठहरू</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/festival/shivaratri/" className="underline">
-                Previous festival: Maha Shivaratri
+                <span className="lang-ne">अघिल्लो पर्व: महाशिवरात्रि</span>
+                <span className="lang-en">Previous festival: Maha Shivaratri</span>
               </a>
               <a href="/month/falgun/" className="underline">
-                Month of Falgun
+                <span className="lang-ne">फागुन महिना</span>
+                <span className="lang-en">Month of Falgun</span>
               </a>
               <a href="/month/chaitra/" className="underline">
-                Month of Chaitra
+                <span className="lang-ne">चैत महिना</span>
+                <span className="lang-en">Month of Chaitra</span>
               </a>
               <a href="/calendar/" className="underline">
-                Today&apos;s Tithi
+                <span className="lang-ne">आजको तिथि</span>
+                <span className="lang-en">Today&apos;s Tithi</span>
               </a>
             </div>
           </div>

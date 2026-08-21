@@ -3,20 +3,22 @@ import { Navbar9 } from "@/components/Navbar9";
 import { Footer4 } from "@/components/Footer4";
 
 export const metadata = {
-  title: "मंसिर महिना — Mangsir 2083 | Harvest & Wedding Season",
+  title: "मंसिर महिना — Mangsir Month | November-December",
   description:
-    "मंसिर (Mangsir) is the eighth month of Bikram Sambat known for Yomari Punhi, Udhauli Parva, Sita Bibaha Panchami and the wedding season. Explore its festivals, dry winter onset, farming and astrology.",
+    "मंसिर (Mangsir) is the eighth month of Bikram Sambat, falling in November-December. Explore Yomari Punhi, Udhauli Parva, the wedding season, cooling weather and Newar and Kirant culture in Nepal.",
   keywords: [
     "mangsir",
     "mangsir month",
+    "मंसिर",
     "मंसिर महिना",
     "yomari punhi",
+    "योमरि पुन्ही",
     "udhauli parva",
-    "sita bibaha panchami",
+    "उधौली",
     "nepali wedding season",
     "nepali calendar mangsir",
-    "kirant sakela",
-    "vrischika sankranti",
+    "newar yomari",
+    "kirant udhauli",
   ],
   alternates: {
     canonical: "https://nepalicalendar.kebinmaharjan.com.np/month/mangsir/",
@@ -50,24 +52,55 @@ const breadcrumbJsonLd = {
 
 const festivals = [
   {
-    name: "योमरी पूर्णिमा (Yomari Punhi)",
-    detail:
-      "Newar kitchens steam yomari — rice-flour dumplings filled with chaku or khuwa — celebrating the harvest and the legend of a blessed couple who shared the sweet with a hidden goddess.",
+    nameNe: "योमरि पुन्ही",
+    nameEn: "Yomari Punhi",
+    detailNe:
+      "नेवार परिवारहरूले चाखू वा खुवा भरिएको योमरी बनाएर अन्न हारुको पूजा गर्छन्। धान कटाइ सकिएपछि मनाइने यो पर्वमा योमरीलाई अन्नपूर्णाको आशीर्वादको प्रतीक मानिन्छ।",
+    detailEn:
+      "Newar families steam yomari — rice-flour dumplings filled with chaku or khuwa — to worship the harvest deity. Celebrated after paddy is threshed, the fish-shaped sweet symbolizes Annapurna's blessing on stored grain.",
   },
   {
-    name: "उधौली पर्व (Udhauli Parva)",
-    detail:
-      "Kirant communities perform Sakela dance in circles, thanking the earth as birds descend to warmer lowlands for winter.",
+    nameNe: "उधौली पर्व",
+    nameEn: "Udhauli Parva",
+    detailNe:
+      "किराँत समुदायले साकेला नाच नाचेर उधौली पर्व मनाउँछन्। चराचुरुङ्गी तल्लो डाँडापाखी झर्दा पृथ्वी र प्रकृतिप्रति कृतज्ञता जनाइन्छ।",
+    detailEn:
+      "Kirant communities celebrate Udhauli with the circular Sakela dance, thanking the earth as birds descend to warmer lowlands for winter. Rice-beer libations open days of synchronized sili steps.",
   },
   {
-    name: "सीता विवाह पञ्चमी (Sita Bibaha Panchami)",
-    detail:
-      "Janakpur erupts in celebration of the marriage of Sita and Ram; processions from Ayodhya join lakhs of pilgrims at Janaki Mandir.",
+    nameNe: "विवाह महोत्सव (लग्नेको सिजन)",
+    nameEn: "Wedding Season (Bibaha)",
+    detailNe:
+      "मंसिर ज्योतिषीय दृष्टिले शुभ महिना मानिन्छ। ब्रतबन्ध, अन्नप्राशन र विवाहका लागि लग्नहरू भर्पिन्छन् — ब्यान्केट हल, होटल र सुन पसलहरू व्यस्त हुन्छन्।",
+    detailEn:
+      "Astrologers consider Mangsir free of major dosha periods, so families book muhurats for bratabandha, annaprashan and vivah back to back. Banquet halls, hotels and gold shops see their busiest weeks after Tihar.",
+  },
+];
+
+const quickFacts = [
+  {
+    labelNe: "महिना",
+    labelEn: "Month",
+    valueNe: "नोभेम्बर-डिसेम्बर",
+    valueEn: "November-December",
   },
   {
-    name: "धान्य पूर्णिमा (Dhanya Purnima)",
-    detail:
-      "The full moon of grains marks thanksgiving for stored harvests, when granaries are full and debts of the farming year are settled.",
+    labelNe: "मुख्य पर्व",
+    labelEn: "Key Festivals",
+    valueNe: "योमरि पुन्ही, उधौली, विवाह महोत्सव",
+    valueEn: "Yomari Punhi, Udhauli, Wedding Season",
+  },
+  {
+    labelNe: "मौसम",
+    labelEn: "Weather",
+    valueNe: "चिसो सुरु, घाम कम",
+    valueEn: "Cold begins, less sunshine",
+  },
+  {
+    labelNe: "संस्कृति",
+    labelEn: "Culture",
+    valueNe: "नेवार योमरी, किराँत उधौली",
+    valueEn: "Newar Yomari, Kirant Udhauli",
   },
 ];
 
@@ -83,22 +116,42 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · आठौँ महिना
+              <span className="lang-ne">
+                विक्रम संवत् · आठौँ महिना · नोभेम्बर-डिसेम्बर
+              </span>
+              <span className="lang-en">
+                Vikram Samvat · Eighth Month · November-December
+              </span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              मंसिर महिना — Mangsir 2083
+              <span className="lang-ne">मंसिर महिना</span>
+              <span className="lang-en">Mangsir Month</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              कार्तिक&apos;s fireworks fade and मंसिर arrives — from
-              mid-November to mid-December — bringing calm blue skies,
-              threshing dust and the cheerful bustle of wedding season. With
-              no major national festival dominating the calendar, Mangsir is
-              when Nepalis marry, travel and celebrate community traditions
-              like Yomari Punhi at their own pace. Use our{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              to shortlist lagna dates before banquet halls book out.
+              <span className="lang-ne">
+                मंसिर विक्रम संवत्को आठौँ महिना हो, जुन नोभेम्बरदेखि डिसेम्बरसम्म
+                पर्छ। धान कटाइ सकिएपछि आउने यो महिना शान्त निलो आकाश, थ्रेसिङ
+                धुलो र खुशीयाली विवाह सिजनका लागि चिनिन्छ। नेवार समुदायको योमरि
+                पुन्ही, किराँत समुदायको उधौली पर्व र देशव्यापी विवाह महोत्सवले
+                मंसिरलाई उत्सवको महिना बनाउँछ। लग्न मितिहरू{" "}
+                <a href="/calendar/" className="underline">
+                  नेपाली पात्रो
+                </a>{" "}
+                मा हेर्नुहोस्।
+              </span>
+              <span className="lang-en">
+                Mangsir is the eighth month of Bikram Sambat, spanning
+                November to December. Arriving after the paddy harvest, it
+                brings calm blue skies, threshing dust and the cheerful bustle
+                of wedding season. The Newar community steams Yomari Punhi
+                sweets, Kirant communities dance Sakela for Udhauli, and
+                families across Nepal celebrate weddings at their own pace.
+                Shortlist lagna dates on our{" "}
+                <a href="/calendar/" className="underline">
+                  Nepali calendar
+                </a>
+                .
+              </span>
             </p>
           </div>
         </section>
@@ -106,40 +159,49 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              The Month of Marriages and Mithila
+              <span className="lang-ne">एक नजरमा मंसिर</span>
+              <span className="lang-en">Mangsir at a Glance</span>
             </h2>
-            <p className="mb-4">
-              Ask any Kathmandu event planner: Mangsir is peak lagna season.
-              Astrologers consider the month free of major dosha periods, so
-              families schedule bratabandha, annaprashan and vivah ceremonies
-              back to back. Hotels in Pokhara and Nagarkot fill with baraat
-              parties, and gold shops see their strongest sales after Tihar.
-            </p>
-            <p>
-              In the Tarai heartland of Mithila, Sita Bibaha Panchami turns
-              Janakpur into a sea of pilgrims re-enacting the celestial
-              wedding. Meanwhile, hill villages mark Yomari Punhi by shaping
-              the fish-like dumplings that symbolize Annapurna&apos;s
-              blessing. Kirant households open Udhauli with rice-beer libations
-              and the synchronized steps of Sakela sili, mimicking birds and
-              beasts heading downhill.
-            </p>
+            <ul className="grid gap-6 md:grid-cols-2">
+              {quickFacts.map((f) => (
+                <li
+                  key={f.labelEn}
+                  className="rounded-lg border border-border-primary p-6"
+                >
+                  <h3 className="mb-2 text-xl font-semibold">
+                    <span className="lang-ne">{f.labelNe}</span>
+                    <span className="lang-en">{f.labelEn}</span>
+                  </h3>
+                  <p>
+                    <span className="lang-ne">{f.valueNe}</span>
+                    <span className="lang-en">{f.valueEn}</span>
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-              Major Festivals in Mangsir
+              <span className="lang-ne">मंसिरका मुख्य चाडपर्वहरू</span>
+              <span className="lang-en">Major Festivals in Mangsir</span>
             </h2>
             <ul className="grid gap-6 md:grid-cols-2">
               {festivals.map((f) => (
                 <li
-                  key={f.name}
+                  key={f.nameEn}
                   className="rounded-lg border border-border-primary p-6"
                 >
-                  <h3 className="mb-2 text-xl font-semibold">{f.name}</h3>
-                  <p>{f.detail}</p>
+                  <h3 className="mb-2 text-xl font-semibold">
+                    <span className="lang-ne">{f.nameNe}</span>
+                    <span className="lang-en">{f.nameEn}</span>
+                  </h3>
+                  <p>
+                    <span className="lang-ne">{f.detailNe}</span>
+                    <span className="lang-en">{f.detailEn}</span>
+                  </p>
                 </li>
               ))}
             </ul>
@@ -150,47 +212,81 @@ export default function Page() {
           <div className="container mx-auto grid gap-12 md:grid-cols-2 lg:gap-x-20">
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Weather &amp; Season
+                <span className="lang-ne">मौसम र ऋतु</span>
+                <span className="lang-en">Weather &amp; Season</span>
               </h2>
               <p className="mb-4">
-                Hemanta ritu settles in. Days stay sunny and mild — around
-                20°C in the valley — but nights slide toward single digits,
-                and Terai mornings grow foggy enough to delay flights.
-                Rainfall is rare, making Mangsir ideal for trekking lower
-                routes like Panchase, cycling trips and outdoor weddings under
-                clear skies.
+                <span className="lang-ne">
+                  मंसिरमा हेमन्त ऋतु सुरु हुन्छ। चिसो बढ्न थाल्छ, घाम कम लाग्छ
+                  र बिहान-बेलुका जाडो महसुस हुन्छ। उपत्यकामा दिनको तापक्रम
+                  करिब २० डिग्रीमा झर्छ भने राति एक अंकमा ओर्लछ। पानी पर्ने
+                  सम्भावना निकै कम हुन्छ, त्यसैले मंसिर ट्रेकिङ, साइकल यात्रा
+                  र खुला आकाशमुनि विवाहका लागि उपयुक्त हुन्छ।
+                </span>
+                <span className="lang-en">
+                  Hemanta ritu settles in during Mangsir. The cold begins,
+                  sunshine weakens, and mornings and evenings turn crisp.
+                  Valley daytime temperatures slide to around 20°C while
+                  nights drop toward single digits. Rainfall is rare, making
+                  the month ideal for lower-route trekking, cycling trips and
+                  outdoor weddings under clear skies.
+                </span>
               </p>
               <h2 className="mb-4 mt-8 text-3xl font-bold md:text-4xl">
-                Agriculture
+                <span className="lang-ne">कृषि र जीवनशैली</span>
+                <span className="lang-en">Agriculture &amp; Life</span>
               </h2>
               <p>
-                The threshing season peaks: paddy is winnowed, weighed and
-                stacked into straw towers that dot the landscape till spring.
-                Potato planting accelerates in hill terraces, mustard fields
-                turn yellow-green, and riverbeds yield winter vegetables.
-                Farmers also store seed grain and repair tools during these
-                quieter weeks.
+                <span className="lang-ne">
+                  धान मझेरीमा थन्किन्छ, आलो खेती तीव्र हुन्छ र तोरीका बाली
+                  हरियो-पहेँलो हुँदै जान्छ। किसानहरू बीउ भण्डारण गर्छन् र
+                  औजार मर्मत गर्छन्।
+                </span>
+                <span className="lang-en">
+                  Paddy is stacked into straw towers, potato planting
+                  accelerates in hill terraces, and mustard fields turn
+                  yellow-green. Farmers store seed grain and repair tools
+                  during these quieter weeks.
+                </span>
               </p>
             </div>
             <div>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                Astrological Significance
+                <span className="lang-ne">सांस्कृतिक महत्त्व</span>
+                <span className="lang-en">Cultural Significance</span>
               </h2>
               <p className="mb-4">
-                Vrischika Sankranti places the Sun in Vrischika (Scorpio)
-                rashi through most of Mangsir. The Sanskrit name Margashirsha
-                points to the Mrigashira nakshatra — the &quot;head of the
-                path&quot; — which the Gita itself praises as the foremost of
-                months. Because lunar muhurats here are considered clean of
-                Chaturmas residue, jyotishis rate Mangsir among the best
-                months for griha pravesh and sacred unions.
+                <span className="lang-ne">
+                  मंसिर नेवार र किराँत संस्कृतिको संगम हो। नेवार घरघरमा योमरी
+                  स्टिम हुन्छ — चामलको पिठोको भट्टीमा चाखू वा खुवा भरेर
+                  अन्नपूर्णालाई चढाइन्छ। किराँत समुदायले उधौलीमा साकेला सिलि
+                  नाचेर प्रकृतिसँग एकता जनाउँछन्। साथै यो महिना विवाह, ब्रतबन्ध
+                  जस्ता शुभ कार्यका लागि सबैभन्दा माग भएको महिना पनि हो।
+                </span>
+                <span className="lang-en">
+                  Mangsir blends Newar and Kirant heritage. In every Newar
+                  household, yomari dumplings are steamed and offered to
+                  Annapurna, while Kirant households open Udhauli with
+                  rice-beer libations and Sakela sili steps mimicking birds
+                  heading downhill. It is also the most requested month for
+                  auspicious rites like vivah and bratabandha.
+                </span>
               </p>
               <p>
-                Compare BS and AD dates instantly on our{" "}
-                <a href="/date-converter/" className="underline">
-                  date converter
-                </a>
-                .
+                <span className="lang-ne">
+                  BS र AD मिति तुरुन्तै तुलना गर्न हाम्रो{" "}
+                  <a href="/date-converter/" className="underline">
+                    मिति रूपान्तरण
+                  </a>{" "}
+                  प्रयोग गर्नुहोस्।
+                </span>
+                <span className="lang-en">
+                  Compare BS and AD dates instantly on our{" "}
+                  <a href="/date-converter/" className="underline">
+                    date converter
+                  </a>
+                  .
+                </span>
               </p>
             </div>
           </div>
@@ -199,23 +295,29 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">सम्बन्धित पृष्ठहरू</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/month/kartik/" className="underline">
-                Previous month: Kartik
+                <span className="lang-ne">अघिल्लो महिना: कात्तिक</span>
+                <span className="lang-en">Previous month: Kartik</span>
               </a>
               <a href="/month/poush/" className="underline">
-                Next month: Poush
+                <span className="lang-ne">अर्को महिना: पौष</span>
+                <span className="lang-en">Next month: Poush</span>
               </a>
               <a href="/festival/yomari-punhi/" className="underline">
-                Yomari Punhi
+                <span className="lang-ne">योमरि पुन्ही</span>
+                <span className="lang-en">Yomari Punhi</span>
               </a>
-              <a href="/festival/sita-bibaha-panchami/" className="underline">
-                Sita Bibaha Panchami
+              <a href="/calendar/" className="underline">
+                <span className="lang-ne">पात्रो हेर्नुहोस्</span>
+                <span className="lang-en">View Calendar</span>
               </a>
               <a href="/converter/" className="underline">
-                BS to AD Converter
+                <span className="lang-ne">BS देखि AD रूपान्तरण</span>
+                <span className="lang-en">BS to AD Converter</span>
               </a>
             </div>
           </div>

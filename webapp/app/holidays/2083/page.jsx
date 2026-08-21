@@ -262,20 +262,38 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <p className="mb-3 font-semibold md:mb-4">
-              विक्रम संवत् २०८३ · अप्रिल २०२६ – अप्रिल २०२७
+              <span className="lang-ne">
+                विक्रम संवत् २०८३ · अप्रिल २०२६ – अप्रिल २०२७
+              </span>
+              <span className="lang-en">
+                Bikram Sambat 2083 · April 2026 – April 2027
+              </span>
             </p>
             <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
-              सार्वजनिक बिदा २०८३
+              <span className="lang-ne">सार्वजनिक बिदा २०८३</span>
+              <span className="lang-en">Public Holidays 2083</span>
             </h1>
             <p className="max-w-3xl md:text-md">
-              Bikram Sambat 2083 is packed with vibrant festivals and official
-              public holidays, from the New Year celebrations of Baisakh to the
-              colors of Holi in Falgun. Use this complete holiday list to plan
-              travel, family gatherings and business schedules throughout the{" "}
-              <a href="/calendar/" className="underline">
-                Nepali calendar
-              </a>{" "}
-              year.
+              <span className="lang-ne">
+                विक्रम संवत् २०८३ बैशाखको नयाँ वर्षदेखि फागुनको होलीसम्म
+                रङ्गीन चाडपर्व र आधिकारिक सार्वजनिक बिदाले भरिपूर्ण छ। यस
+                पूरा बिदा सूचीलाई प्रयोग गरेर{" "}
+                <a href="/calendar/" className="underline">
+                  नेपाली पात्रो
+                </a>{" "}
+                वर्षभरि यात्रा, पारिवारिक भेला र व्यवसायिक तालिका योजना
+                बनाउनुहोस्।
+              </span>
+              <span className="lang-en">
+                Bikram Sambat 2083 is packed with vibrant festivals and official
+                public holidays, from the New Year celebrations of Baisakh to the
+                colors of Holi in Falgun. Use this complete holiday list to plan
+                travel, family gatherings and business schedules throughout the{" "}
+                <a href="/calendar/" className="underline">
+                  Nepali calendar
+                </a>{" "}
+                year.
+              </span>
             </p>
           </div>
         </section>
@@ -283,16 +301,33 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto">
             <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-              Major Public Holidays &amp; Festivals 2083
+              <span className="lang-ne">
+                प्रमुख सार्वजनिक बिदा तथा चाडपर्वहरू २०८३
+              </span>
+              <span className="lang-en">
+                Major Public Holidays &amp; Festivals 2083
+              </span>
             </h2>
             <div className="overflow-x-auto rounded-lg border border-border-primary">
               <table className="w-full min-w-[720px] border-collapse text-left">
                 <thead>
                   <tr className="border-b border-border-primary bg-surface-secondary">
-                    <th className="px-4 py-3 font-semibold">मिति (BS)</th>
-                    <th className="px-4 py-3 font-semibold">Date (AD approx)</th>
-                    <th className="px-4 py-3 font-semibold">Holiday</th>
-                    <th className="px-4 py-3 font-semibold">Description</th>
+                    <th className="px-4 py-3 font-semibold">
+                      <span className="lang-ne">मिति (वि.सं.)</span>
+                      <span className="lang-en">Date (BS)</span>
+                    </th>
+                    <th className="px-4 py-3 font-semibold">
+                      <span className="lang-ne">मिति (सन्, अनुमानित)</span>
+                      <span className="lang-en">Date (AD approx)</span>
+                    </th>
+                    <th className="px-4 py-3 font-semibold">
+                      <span className="lang-ne">बिदा</span>
+                      <span className="lang-en">Holiday</span>
+                    </th>
+                    <th className="px-4 py-3 font-semibold">
+                      <span className="lang-ne">विवरण</span>
+                      <span className="lang-en">Description</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -319,20 +354,42 @@ export default function Page() {
           <div className="container mx-auto max-w-4xl">
             <div className="rounded-lg border border-border-primary p-6 md:p-8">
               <h2 className="mb-4 text-2xl font-bold md:text-3xl">
-                Important Note
+                <span className="lang-ne">महत्वपूर्ण जानकारी</span>
+                <span className="lang-en">Important Note</span>
               </h2>
               <p>
-                The exact dates of these holidays may vary by one or two days
-                depending on the final announcements of the{" "}
-                <strong>नेपाल पञ्चाङ्ग निर्णायक समिति (Nepal Panchanga
-                Nirnayak Samiti)</strong>. Lunar festivals such as Teej, Janai
-                Purnima, Tihar and Holi depend on precise tithi timings, so
-                always confirm with the officially published panchang before
-                making travel plans. Check our{" "}
-                <a href="/date-converter/" className="underline">
-                  date converter
-                </a>{" "}
-                for accurate BS to AD conversions.
+                <span className="lang-ne">
+                  यी बिदाहरूको सही मिति{" "}
+                  <strong>
+                    नेपाल पञ्चाङ्ग निर्णायक समिति (Nepal Panchanga Nirnayak
+                    Samiti)
+                  </strong>{" "}
+                  को अन्तिम घोषणाअनुसार एक-दुई दिन फरक पर्न सक्छ। तीज, जनै
+                  पूर्णिमा, तिहार र होलीजस्ता चान्द्र पर्वहरू सटीक तिथि
+                  समयमा निर्भर हुने भएकाले यात्रा योजना बनाउनुअघि सधैं
+                  आधिकारिक रूपमा प्रकाशित पञ्चाङ्ग पुष्टि गर्नुहोस्। सही
+                  वि.सं. → सन् रूपान्तरणका लागि हाम्रो{" "}
+                  <a href="/date-converter/" className="underline">
+                    मिति परिवर्तक
+                  </a>{" "}
+                  हेर्नुहोस्।
+                </span>
+                <span className="lang-en">
+                  The exact dates of these holidays may vary by one or two days
+                  depending on the final announcements of the{" "}
+                  <strong>
+                    Nepal Panchanga Nirnayak Samiti (नेपाल पञ्चाङ्ग निर्णायक
+                    समिति)
+                  </strong>
+                  . Lunar festivals such as Teej, Janai Purnima, Tihar and Holi
+                  depend on precise tithi timings, so always confirm with the
+                  officially published panchang before making travel plans.
+                  Check our{" "}
+                  <a href="/date-converter/" className="underline">
+                    date converter
+                  </a>{" "}
+                  for accurate BS to AD conversions.
+                </span>
               </p>
             </div>
           </div>
@@ -341,26 +398,33 @@ export default function Page() {
         <section className="px-[5%] py-16 md:py-24">
           <div className="container mx-auto max-w-4xl">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl">
-              Explore Related Pages
+              <span className="lang-ne">सम्बन्धित पृष्ठहरू</span>
+              <span className="lang-en">Explore Related Pages</span>
             </h2>
             <div className="flex flex-wrap gap-4">
               <a href="/calendar/" className="underline">
-                Full Calendar 2083
+                <span className="lang-ne">पूरा पात्रो २०८३</span>
+                <span className="lang-en">Full Calendar 2083</span>
               </a>
               <a href="/month/baisakh/" className="underline">
-                Baisakh Month
+                <span className="lang-ne">बैशाख महिना</span>
+                <span className="lang-en">Baisakh Month</span>
               </a>
               <a href="/month/kartik/" className="underline">
-                Kartik Month (Tihar)
+                <span className="lang-ne">कात्तिक महिना (तिहार)</span>
+                <span className="lang-en">Kartik Month (Tihar)</span>
               </a>
               <a href="/month/ashwin/" className="underline">
-                Ashwin Month (Dashain)
+                <span className="lang-ne">असोज महिना (दशैं)</span>
+                <span className="lang-en">Ashwin Month (Dashain)</span>
               </a>
               <a href="/rashifal/" className="underline">
-                Rashifal
+                <span className="lang-ne">राशिफल</span>
+                <span className="lang-en">Rashifal</span>
               </a>
               <a href="/date-converter/" className="underline">
-                Date Converter
+                <span className="lang-ne">मिति परिवर्तक</span>
+                <span className="lang-en">Date Converter</span>
               </a>
             </div>
           </div>
